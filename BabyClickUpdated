@@ -1,0 +1,50 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Timers;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Baby : MonoBehaviour
+{
+    public GameObject cameraSelect;
+    public GameObject CameraControllerLVL1;
+    public GameObject CameraControllerLVL2;
+    public GameObject CameraControllerLVL3;
+    public Animator animator;
+    public GameObject Tutorial;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    private void OnMouseDown()
+    {
+            StartCoroutine(startTimer(2));
+            animator.SetTrigger("FadeIn");
+            //In unity, drag the animation you want to destroy into the script.
+        GameObject.DestroyImmediate(Tutorial.gameObject);
+
+    }
+    public IEnumerator startTimer(float timeLeft)
+    {
+        while (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+            yield return null;
+        }
+        CameraControllerLVL1.SetActive(false);
+        CameraControllerLVL2.SetActive(true);
+        CameraControllerLVL3.SetActive(false);
+        cameraSelect.SetActive(false);
+    }
+    
+    }
