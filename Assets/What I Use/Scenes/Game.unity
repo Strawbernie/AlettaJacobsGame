@@ -4476,15 +4476,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e495eee1fcf5d34996a52f63a00c840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Image: {fileID: 545910977}
-  m_SpriteArray:
+  duration: 0.75
+  sprites:
   - {fileID: -1454324354, guid: 890a78ce2983bd64a83bd7f7b7ad32cf, type: 3}
   - {fileID: -417966612, guid: 890a78ce2983bd64a83bd7f7b7ad32cf, type: 3}
   - {fileID: -42935273, guid: 890a78ce2983bd64a83bd7f7b7ad32cf, type: 3}
-  m_Speed: 0.01
-  cameraScene: {fileID: 963194225}
   TapAnimation: {fileID: 545910974}
-  inLevel: 0
 --- !u!114 &545910977
 MonoBehaviour:
   m_ObjectHideFlags: 0
