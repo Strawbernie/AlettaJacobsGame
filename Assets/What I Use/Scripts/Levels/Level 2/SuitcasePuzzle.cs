@@ -37,7 +37,6 @@ public class SuitcasePuzzle : MonoBehaviour
 
     public FirstTimePassed firstTimePassed;
     public DisabledMode disabledMode;
-    public GameObject ParticleSystem;
 
     private IEnumerator EnableStuffAfterDelay()
     {
@@ -46,7 +45,6 @@ public class SuitcasePuzzle : MonoBehaviour
         disabledMode.swipeDisabled = false;
         camera2.SetActive(false);
         camera3.SetActive(true);
-        Destroy(ParticleSystem);
     }
 
     private void Start()

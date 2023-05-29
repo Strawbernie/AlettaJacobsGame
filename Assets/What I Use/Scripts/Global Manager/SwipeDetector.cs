@@ -14,6 +14,7 @@ public class SwipeDetector : MonoBehaviour
 
     // Disabled mode
     public DisabledMode disabledMode;
+    public GameObject SwipeTutorial;
 
     IEnumerator RotateMe(Vector3 byAngles, float inTime)
     {
@@ -27,6 +28,7 @@ public class SwipeDetector : MonoBehaviour
             yield return null;
             isRotating = false; //ends rotation
             disabledMode.zoomDisabled = false; // enable zoom in/out script when rotating is finished
+            Destroy(SwipeTutorial);
         }
     }
 

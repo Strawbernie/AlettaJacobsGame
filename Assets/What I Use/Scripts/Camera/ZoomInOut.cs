@@ -46,6 +46,10 @@ public class ZoomInOut : MonoBehaviour
     // Boolean that will allow the code to detect touch
     public bool objectTapDetectorActive = true;
 
+    //LVL 2 tutorial
+    public DragAndDrop DD;
+    public GameObject ccamera2;
+
     private void Start()
     {
         // Assign code to a button
@@ -138,6 +142,11 @@ public class ZoomInOut : MonoBehaviour
                                 invWalls.SetActive(true);
                                 StartCoroutine(SmoothCameraChange(newPosition, newRotation, newOrthoSize));
                                 isAtOriginalPosition = false;
+                                //checks if camera2 is active to set the suitcase tutorial active
+                                if (ccamera2.activeSelf)
+                                {
+                                    DD.Tutorial.SetActive(true);
+                                }
                             }
                         }
                     }

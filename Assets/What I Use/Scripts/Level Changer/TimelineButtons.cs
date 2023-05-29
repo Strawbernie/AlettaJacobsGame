@@ -28,6 +28,7 @@ public class TimelineButtons : MonoBehaviour
 
     private GameObject levelChanger;
     Animator anim;
+    public GameObject SwipeTutorial;
 
     private bool isActive = false;
 
@@ -51,6 +52,7 @@ public class TimelineButtons : MonoBehaviour
         camera4.SetActive(false);
         camera5.SetActive(false);
         camera6.SetActive(false);
+        SwipeTutorial.SetActive(true);
     }
 
     private IEnumerator EnableStuffAfterDelay3()

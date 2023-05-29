@@ -36,7 +36,7 @@ public class Tutorials : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
-            // Check if the touch phase is just began
+            // Check if the touch phase is just began, then destroy the tapanimation
             if (touch.phase == TouchPhase.Began)
             {
                 Destroy(TapAnimation);

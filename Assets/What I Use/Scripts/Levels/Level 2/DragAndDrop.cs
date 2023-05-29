@@ -20,6 +20,8 @@ public class DragAndDrop : MonoBehaviour
     Vector3 originalScreenTargetPosition;
     Vector3 originalRigidbodyPos;
     float selectionDistance;
+    public GameObject Tutorial;
+    public GameObject ParticleSystem;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,7 @@ public class DragAndDrop : MonoBehaviour
         {
             if (suitcaseAnim.isOpen)
             {
+                Destroy(ParticleSystem);
                 if (Input.touchCount > 0)
                 {
                     Touch touch = Input.GetTouch(0);
@@ -41,6 +44,7 @@ public class DragAndDrop : MonoBehaviour
                     {
                         //Check if we are hovering over Rigidbody, if so, select it
                         selectedRigidbody = GetRigidbodyFromTouch(touch.position);
+                        Tutorial.SetActive(false);
                     }
                     else if (touch.phase == TouchPhase.Ended && selectedRigidbody)
                     {
