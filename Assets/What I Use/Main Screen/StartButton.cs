@@ -11,7 +11,7 @@ public class StartButton : MonoBehaviour
     public GameObject Menu;
     Animator anim;
     public GameObject TapAnimation;
-
+    public GameObject Cog;
     private void Start()
     {
         button.onClick.AddListener(GoToGame);
@@ -32,5 +32,6 @@ public class StartButton : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Menu.SetActive(false);
         TapAnimation.SetActive(true);
+        Cog.SetActive(true);
     }
 }
