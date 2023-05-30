@@ -37,6 +37,7 @@ public class SuitcasePuzzle : MonoBehaviour
 
     public FirstTimePassed firstTimePassed;
     public DisabledMode disabledMode;
+    public GameObject HintPanel;
 
     private IEnumerator EnableStuffAfterDelay()
     {
@@ -45,6 +46,7 @@ public class SuitcasePuzzle : MonoBehaviour
         disabledMode.swipeDisabled = false;
         camera2.SetActive(false);
         camera3.SetActive(true);
+        HintPanel.SetActive(false);
     }
 
     private void Start()
@@ -77,6 +79,7 @@ public class SuitcasePuzzle : MonoBehaviour
                 anim.SetTrigger("TrZoomOut");
                 suitcaseAnim.isOpen = false;
                 animator.SetTrigger("FadeOut");
+                HintPanel.SetActive(false);
                 StartCoroutine(EnableStuffAfterDelay());
             }
         }

@@ -18,6 +18,7 @@ public class ChestPuzzle : MonoBehaviour
     public DisabledMode disabledMode;
     public FirstTimePassed firstTimePassed;
     public GameObject ParticleSystem;
+    public GameObject HintPanel;
 
     private IEnumerator EnableStuffAfterDelay()
     {
@@ -52,6 +53,7 @@ public class ChestPuzzle : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == gameObject)
                 {
+                    HintPanel.SetActive(false);
                     firstTimePassed.firstTimeLevel3 = false;
                     StartCoroutine(EnableStuffAfterDelay());
                 }

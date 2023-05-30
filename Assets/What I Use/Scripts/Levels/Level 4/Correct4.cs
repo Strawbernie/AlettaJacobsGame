@@ -22,6 +22,7 @@ public class Correct4 : MonoBehaviour
     public GameObject C4;
     public GameObject Button;
     public GameObject ParticleSystem;
+    public GameObject HintPanel;
     // Boolean that will allow the code to detect touch
     public bool objectTapDetectorActive = true;
 
@@ -52,6 +53,7 @@ public class Correct4 : MonoBehaviour
                     firstTimePassed.firstTimeLevel4 = false;
                     animator.SetTrigger("FadeOut");
                     StartCoroutine(EnableStuffAfterDelay());
+                    HintPanel.SetActive(false);
                 }
 
                 if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)

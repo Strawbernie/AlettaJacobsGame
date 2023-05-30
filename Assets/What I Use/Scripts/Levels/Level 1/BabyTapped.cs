@@ -23,7 +23,7 @@ public class BabyTapped : MonoBehaviour
     public DisabledMode disabledMode;
     public FirstTimePassed firstTimePassed;
     public GameObject ParticleSystem;
-
+    public GameObject HintPanel;
     private IEnumerator EnableStuffAfterDelay()
     {
         yield return new WaitForSeconds(1f);
@@ -54,6 +54,7 @@ public class BabyTapped : MonoBehaviour
                     anim.SetTrigger("TrZoomOut");
                     babyBedAnim.isOpen = false;
                     animator.SetTrigger("FadeOut");
+                    HintPanel.SetActive(false);
                     StartCoroutine(EnableStuffAfterDelay());
                 }
             }

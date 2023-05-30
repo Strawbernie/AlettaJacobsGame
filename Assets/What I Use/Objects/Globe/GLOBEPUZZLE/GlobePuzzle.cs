@@ -10,6 +10,7 @@ public class GlobePuzzle : MonoBehaviour
     public GameObject WinCheck;
     //public GameObject globeCamera;
     public bool objectTapDetectorActive = true;
+    public GameObject HintPanel;
     // Start is called before the first frame update
 
 
@@ -41,7 +42,7 @@ public class GlobePuzzle : MonoBehaviour
 
                     if (WinCheck.activeSelf)
                     {
-                        //WIN
+                        HintPanel.SetActive(false);
                     }
                 }
 
