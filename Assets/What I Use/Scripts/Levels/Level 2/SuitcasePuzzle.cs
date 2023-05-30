@@ -38,6 +38,7 @@ public class SuitcasePuzzle : MonoBehaviour
     public FirstTimePassed firstTimePassed;
     public DisabledMode disabledMode;
     public GameObject HintPanel;
+    public GameObject Hint;
 
     private IEnumerator EnableStuffAfterDelay()
     {
@@ -47,6 +48,7 @@ public class SuitcasePuzzle : MonoBehaviour
         camera2.SetActive(false);
         camera3.SetActive(true);
         HintPanel.SetActive(false);
+        Hint.SetActive(false);
     }
 
     private void Start()

@@ -30,23 +30,23 @@ public class Hints : MonoBehaviour
             {
                 HintLVL1.SetActive(false);
             }
-            else if (!camera2.activeSelf)
+            if (!camera2.activeSelf)
             {
                 HintLVL2.SetActive(false);
             }
-            else if (!camera3.activeSelf)
+             if (!camera3.activeSelf)
             {
                 HintLVL3.SetActive(false);
             }
-            else if (!camera4.activeSelf)
+             if (!camera4.activeSelf)
             {
                 HintLVL4.SetActive(false);
             }
-            else if (!camera5.activeSelf)
+            if (!camera5.activeSelf)
             {
                 HintLVL5.SetActive(false);
             }
-            else if (!camera6.activeSelf)
+            if (!camera6.activeSelf)
             {
                 HintLVL6.SetActive(false);
             }

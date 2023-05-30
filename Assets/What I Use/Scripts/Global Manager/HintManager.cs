@@ -8,6 +8,8 @@ public class HintManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject confirmMenu;
     public GameObject HintButton;
+    public GameObject hintPanel;
+    public GameObject TargetHint;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -21,5 +23,10 @@ public class HintManager : MonoBehaviour
         {
             HintButton.SetActive(false);
         }
+    }
+    public void OnButtonPress()
+    {
+        hintPanel.SetActive(false);
+        TargetHint.SetActive(false);
     }
 }
