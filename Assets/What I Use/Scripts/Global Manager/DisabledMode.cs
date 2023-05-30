@@ -15,6 +15,9 @@ public class DisabledMode : MonoBehaviour
     public bool goBackDisabled = true;
     public bool timeTravelDisabled = true;
 
+    public GameObject MainMenu;
+    public GameObject pauseMenu;
+
     private void Update()
     {
         // switch buttons appearing on the screen depending on its be
@@ -30,7 +33,7 @@ public class DisabledMode : MonoBehaviour
                 timeTravel.SetActive(false);
             }
         }
-        else
+        else if (!MainMenu.activeSelf && !pauseMenu.activeSelf)
         {
             goBack.SetActive(true);
             timeTravel.SetActive(false);
