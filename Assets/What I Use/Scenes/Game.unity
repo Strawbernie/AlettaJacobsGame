@@ -15457,6 +15457,8 @@ MonoBehaviour:
   touchDisabled: 1
   goBackDisabled: 1
   timeTravelDisabled: 1
+  MainMenu: {fileID: 732450430}
+  pauseMenu: {fileID: 581966236}
 --- !u!1 &1729528349 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7051463574406840151, guid: 2cd8695889ceaf44b8ec799624d1b245,
