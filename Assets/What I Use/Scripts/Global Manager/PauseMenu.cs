@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!MainMenu.activeSelf) 
+        if (!MainMenu.activeSelf || !Pausemenu.activeSelf) 
         {
             Cog.SetActive(true);
         }
@@ -19,6 +19,15 @@ public class PauseMenu : MonoBehaviour
     
     public void Onpress()
     {
-        Pausemenu.SetActive(true);
+        if (!Pausemenu.activeSelf)
+        {
+            Pausemenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Pausemenu.SetActive(false);
+            Time.timeScale = 1;
+        }
     }
 }

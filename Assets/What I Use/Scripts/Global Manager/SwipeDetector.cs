@@ -16,6 +16,8 @@ public class SwipeDetector : MonoBehaviour
     public DisabledMode disabledMode;
     public GameObject SwipeTutorial;
     public GameObject MainMenu;
+    public GameObject pauseMenu;
+    public GameObject Confirmmenu;
 
     IEnumerator RotateMe(Vector3 byAngles, float inTime)
     {
@@ -40,7 +42,7 @@ public class SwipeDetector : MonoBehaviour
 
     void Update()
     {
-        if (!camera4.activeSelf && !MainMenu.activeSelf)
+        if (!camera4.activeSelf && !MainMenu.activeSelf && !pauseMenu.activeSelf && !Confirmmenu.activeSelf)
         {
             if (!disabledMode.swipeDisabled)
             {

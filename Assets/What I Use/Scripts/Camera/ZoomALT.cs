@@ -3,16 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ZoomInOut : MonoBehaviour
+public class ZoomALT : MonoBehaviour
 {
-    public GameObject invWalls;
-    // Cameras
-    public Camera camera1;
-    public Camera camera2;
-    public Camera camera3;
-    public Camera camera4;
-    public Camera camera5;
-    public Camera camera6;
 
     // Disabled Mode
     public DisabledMode disabledMode;
@@ -46,10 +38,6 @@ public class ZoomInOut : MonoBehaviour
     // Boolean that will allow the code to detect touch
     public bool objectTapDetectorActive = true;
 
-    //LVL 2 tutorial
-    public DragAndDrop DD;
-    public GameObject ccamera2;
-    public GameObject Text;
 
     private void Start()
     {
@@ -65,53 +53,7 @@ public class ZoomInOut : MonoBehaviour
         lastRotation = originalRotation;
         lastOrthoSize = originalOrthoSize;
     }
-    private void OnEnable()
-    {
-        // Set the camera position on room changed to be as follows
-        if (gameObject == camera1.gameObject)
-        {
-            invWalls.SetActive(false);
-            transform.position = new Vector3(0, 2.5f, 0);
-            transform.rotation = Quaternion.Euler(30, 225, 0);
-            camera1.orthographicSize = 6f;
-        }
-        else if (gameObject == camera2.gameObject)
-        {
-            invWalls.SetActive(false);
-            transform.position = new Vector3(30, 2.5f, 0);
-            transform.rotation = Quaternion.Euler(30, 45, 0);
-            camera2.orthographicSize = 6f;
-        }
-        else if (gameObject == camera3.gameObject)
-        {
-            invWalls.SetActive(false);
-            transform.position = new Vector3(60, 2.5f, 0);
-            transform.rotation = Quaternion.Euler(30, 45, 0);
-            camera3.orthographicSize = 6f;
-        }
-        else if (gameObject == camera4.gameObject)
-        {
-            invWalls.SetActive(false);
-            transform.position = new Vector3(90, 2.5f, 0);
-            transform.rotation = Quaternion.Euler(30, 45, 0);
-            camera4.orthographicSize = 6f;
-        }
-        else if (gameObject == camera5.gameObject)
-        {
-            invWalls.SetActive(false);
-            transform.position = new Vector3(120, 2.5f, 0);
-            transform.rotation = Quaternion.Euler(30, 45, 0);
-            camera5.orthographicSize = 6f;
-        }
-        else if (gameObject == camera6.gameObject)
-        {
-            invWalls.SetActive(false);
-            transform.position = new Vector3(150, 2.5f, 0);
-            transform.rotation = Quaternion.Euler(30, 45, 0);
-            camera6.orthographicSize = 6f;
-        }
-    }
-
+    
     void Update()
     {
         if (gameObject.activeSelf)
@@ -140,14 +82,9 @@ public class ZoomInOut : MonoBehaviour
                             if (!isChanging)
                             {
                                 // Zoom in
-                                invWalls.SetActive(true);
                                 StartCoroutine(SmoothCameraChange(newPosition, newRotation, newOrthoSize));
                                 isAtOriginalPosition = false;
-                                //checks if camera2 is active to set the suitcase tutorial active
-                                if (ccamera2.activeSelf)
-                                {
-                                    DD.Tutorial.SetActive(true);
-                                }
+                                
                             }
                         }
                     }
@@ -179,7 +116,6 @@ public class ZoomInOut : MonoBehaviour
                         if (!isChanging)
                         {
                             // Zoom out to the original position and rotation of the camera
-                            invWalls.SetActive(false);
                             StartCoroutine(SmoothCameraChange(lastPosition, lastRotation, lastOrthoSize));
                         }
 
@@ -195,12 +131,11 @@ public class ZoomInOut : MonoBehaviour
     private IEnumerator DelayForEnableSwipeDetector()
     {
         disabledMode.zoomDisabled = true;
-        yield return new WaitForSeconds(0.5f); 
+        yield return new WaitForSeconds(0.5f);
         disabledMode.zoomDisabled = false;
         disabledMode.goBackDisabled = true;
         disabledMode.swipeDisabled = false;
         objectTapDetectorActive = true;
-        Text.SetActive(false);
     }
 
     private IEnumerator SmoothCameraChange(Vector3 targetPosition, Quaternion targetRotation, float targetOrthoSize)
@@ -241,7 +176,6 @@ public class ZoomInOut : MonoBehaviour
             if (!isChanging)
             {
                 // Zoom out to the original position and rotation of the camera
-                invWalls.SetActive(false);
                 StartCoroutine(SmoothCameraChange(lastPosition, lastRotation, lastOrthoSize));
             }
 
