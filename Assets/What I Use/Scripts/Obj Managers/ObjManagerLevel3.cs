@@ -11,6 +11,7 @@ public class ObjManagerLevel3 : MonoBehaviour
     // Level's objects
     public GameObject cupboard;
     public GameObject display;
+    public GameObject HModel;
     public GameObject poster;
     public GameObject glass;
     public GameObject curtain1;
@@ -32,6 +33,7 @@ public class ObjManagerLevel3 : MonoBehaviour
             cupboard.SetActive(true);
             ParticleSystem.SetActive(true);
             display.SetActive(true);
+            HModel.SetActive(true);
             poster.SetActive(true);
             glass.SetActive(true);
             curtain1.SetActive(true);
@@ -50,6 +52,7 @@ public class ObjManagerLevel3 : MonoBehaviour
             cupboard.SetActive(false);
             ParticleSystem.SetActive(false);
             display.SetActive(false);
+            HModel.SetActive(false);
             poster.SetActive(false);
             glass.SetActive(false);
             curtain1.SetActive(false);
@@ -68,6 +71,7 @@ public class ObjManagerLevel3 : MonoBehaviour
             cupboard.SetActive(false);
             ParticleSystem.SetActive(false);
             display.SetActive(false);
+            HModel.SetActive(false);
             poster.SetActive(false);
             glass.SetActive(false);
             curtain1.SetActive(false);
@@ -86,6 +90,7 @@ public class ObjManagerLevel3 : MonoBehaviour
             cupboard.SetActive(true);
             ParticleSystem.SetActive(true);
             display.SetActive(true);
+            HModel.SetActive(true);
             poster.SetActive(true); 
             glass.SetActive(true);
             curtain1.SetActive(true);

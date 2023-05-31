@@ -31,6 +31,8 @@ public class DragAndDrop : MonoBehaviour
 
     void Update()
     {
+        if (transform.position == positionCamera && transform.rotation == rotationCamera)
+        {
             if (suitcaseAnim.isOpen)
             {
                 Destroy(ParticleSystem);
@@ -51,6 +53,7 @@ public class DragAndDrop : MonoBehaviour
                     }
                 }
             }
+        }
         }
 
     void FixedUpdate()
