@@ -21,11 +21,13 @@ public class PauseMenu : MonoBehaviour
     {
         if (!Pausemenu.activeSelf)
         {
+            //Sets the pause menu active, and turns off time, so the game is actually paused
             Pausemenu.SetActive(true);
             Time.timeScale = 0;
         }
         else
         {
+            //Sets the pause menu inactive, and turns time back on
             Pausemenu.SetActive(false);
             Time.timeScale = 1;
         }

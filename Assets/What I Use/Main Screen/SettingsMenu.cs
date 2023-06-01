@@ -6,14 +6,16 @@ using UnityEngine.Audio;
 public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    // Start is called before the first frame update
+  
     public void SetVolume (float volume)
     {
+        //allows the player to set the volume with the slider in game
         audioMixer.SetFloat("volume", volume);
     }
 
     public void SetQuality(int qualityIndex)
     {
+        //allows the player to choose the quality in the dropdown menu in game
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 }

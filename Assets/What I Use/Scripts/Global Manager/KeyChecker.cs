@@ -16,13 +16,15 @@ public class KeyChecker : MonoBehaviour
 
     void Update()
     {
+        //if the player touches the screen
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit hit;
-
+            //check if the tap hits the key
             if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == key)
             {
+                //if it hits, destroy the key and its particlesystem, and set hasKey to true
                 Destroy(key);
                 Destroy(ParticleSystem);
                 hasKey = true;
