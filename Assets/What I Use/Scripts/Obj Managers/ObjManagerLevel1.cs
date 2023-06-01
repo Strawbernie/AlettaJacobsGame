@@ -25,6 +25,8 @@ public class ObjManagerLevel1 : MonoBehaviour
     public GameObject bear;
     public GameObject yula;
     public GameObject cubes;
+    public GameObject cubes2;
+    public GameObject cubes3;
     public GameObject babyBottle;
     public GameObject ParticleSystem;
     public GameObject newspaper;
@@ -67,6 +69,8 @@ public class ObjManagerLevel1 : MonoBehaviour
             bear.SetActive(false);
             yula.SetActive(false);
             cubes.SetActive(false);
+            cubes2.SetActive(false);
+            cubes3.SetActive(false);
             babyBottle.SetActive(false);
         }
 
@@ -99,6 +103,8 @@ public class ObjManagerLevel1 : MonoBehaviour
             bear.SetActive(false);
             yula.SetActive(false);
             cubes.SetActive(false);
+            cubes2.SetActive(false);
+            cubes3.SetActive(false);
             babyBottle.SetActive(false);
         }
 
@@ -131,6 +137,8 @@ public class ObjManagerLevel1 : MonoBehaviour
             bear.SetActive(true);
             yula.SetActive(true);
             cubes.SetActive(true);
+            cubes2.SetActive(true);
+            cubes3.SetActive(true);
             babyBottle.SetActive(true);
         }
 
@@ -163,6 +171,8 @@ public class ObjManagerLevel1 : MonoBehaviour
             bear.SetActive(true);
             yula.SetActive(true);
             cubes.SetActive(true);
+            cubes2.SetActive(true);
+            cubes3.SetActive(true);
             babyBottle.SetActive(true);
         }
     }

@@ -12,7 +12,7 @@ public class GlobeSpin : MonoBehaviour
 
     void Update()
     {
-        if (Camera.main.transform.localEulerAngles.y > 101f && Camera.main.transform.localEulerAngles.y < 103f)
+        if (Camera.main.transform.localEulerAngles.y > 131.5f && Camera.main.transform.localEulerAngles.y < 133.5f)
         {
             Destroy(ParticleSystem);
             if (Input.touchCount > 0)

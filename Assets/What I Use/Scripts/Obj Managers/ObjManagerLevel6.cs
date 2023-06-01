@@ -23,6 +23,10 @@ public class ObjManagerLevel6 : MonoBehaviour
     public GameObject chair;
     public GameObject door;
     public GameObject painting4;
+    public GameObject ParticleSystem;
+    public GameObject painting2;
+    public GameObject paper;
+    public GameObject plant2;
 
     // Level's walls
     public GameObject Wall1;
@@ -41,16 +45,20 @@ public class ObjManagerLevel6 : MonoBehaviour
             Wall3.SetActive(false);
             Wall4.SetActive(false);
 
+            ParticleSystem.SetActive(false);
             painting1.SetActive(true);
             sphere.SetActive(true);
             holder.SetActive(true);
             shelf.SetActive(true);
+            plant2.SetActive(true);
             plane.SetActive(true);
             ship.SetActive(true);
             curtain.SetActive(true);
-            painting3.SetActive(false);
+            painting3.SetActive(true);
+            painting2.SetActive(true);
             poster.SetActive(false);
             desk.SetActive(false);
+            paper.SetActive(false);
             quack.SetActive(false);
             pen.SetActive(false);
             lamp.SetActive(false);
@@ -69,16 +77,20 @@ public class ObjManagerLevel6 : MonoBehaviour
             Wall3.SetActive(true);
             Wall4.SetActive(false);
 
+            ParticleSystem.SetActive(true);
             painting1.SetActive(false);
             sphere.SetActive(true);
             holder.SetActive(true); 
             shelf.SetActive(true);
+            plant2.SetActive(true);
             plane.SetActive(true);
             ship.SetActive(true);
             curtain.SetActive(true);
             painting3.SetActive(true);
+            painting2.SetActive(true);
             poster.SetActive(true);
             desk.SetActive(true);
+            paper.SetActive(true);
             quack.SetActive(true);
             pen.SetActive(true);
             lamp.SetActive(true);
@@ -97,16 +109,20 @@ public class ObjManagerLevel6 : MonoBehaviour
             Wall3.SetActive(true);
             Wall4.SetActive(true);
 
+            ParticleSystem.SetActive(false);
             painting1.SetActive(false);
             sphere.SetActive(false);
             holder.SetActive(false);
             shelf.SetActive(false);
+            plant2.SetActive(false);
             plane.SetActive(false);
             ship.SetActive(false);
             curtain.SetActive(false);
-            painting3.SetActive(true);
+            painting3.SetActive(false);
+            painting2.SetActive(false);
             poster.SetActive(true);
             desk.SetActive(true);
+            paper.SetActive(true);
             quack.SetActive(true);
             pen.SetActive(true);
             lamp.SetActive(true);
@@ -125,16 +141,20 @@ public class ObjManagerLevel6 : MonoBehaviour
             Wall3.SetActive(false);
             Wall4.SetActive(true);
 
+            ParticleSystem.SetActive(false);
             painting1.SetActive(true);
             sphere.SetActive(false);
-            shelf.SetActive(false); 
             shelf.SetActive(false);
+            plant2.SetActive(false);
+            holder.SetActive(false);
             plane.SetActive(false);
             ship.SetActive(false);
             curtain.SetActive(false);
             painting3.SetActive(false);
+            painting2.SetActive(false);
             poster.SetActive(false);
             desk.SetActive(false);
+            paper.SetActive(false);
             quack.SetActive(false);
             pen.SetActive(false);
             lamp.SetActive(false);

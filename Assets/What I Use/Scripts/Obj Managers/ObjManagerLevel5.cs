@@ -8,7 +8,6 @@ public class ObjManagerLevel5 : MonoBehaviour
     public GameObject door;
     public GameObject painting1;
     public GameObject cupboard1;
-    public GameObject plant1;
     public GameObject bed;
     public GameObject painting2;
     public GameObject plant2;
@@ -20,6 +19,7 @@ public class ObjManagerLevel5 : MonoBehaviour
     public GameObject mirrorReflection;
     public GameObject painting4;
     public GameObject fireplace;
+    public GameObject PicFrameFancy;
 
     // Level's walls
     public GameObject Wall1;
@@ -38,12 +38,12 @@ public class ObjManagerLevel5 : MonoBehaviour
             Wall3.SetActive(false);
             Wall4.SetActive(false);
 
+            PicFrameFancy.SetActive(true);
             door.SetActive(true);
             painting1.SetActive(true);
             cupboard1.SetActive(true);
-            plant1.SetActive(true);
             bed.SetActive(true);
-            painting2.SetActive(true);
+            painting2.SetActive(false);
             plant2.SetActive(true);
             cupboard2.SetActive(true);
             lamp.SetActive(true);
@@ -51,7 +51,7 @@ public class ObjManagerLevel5 : MonoBehaviour
             curtain2.SetActive(false);
             mirror.SetActive(false);
             mirrorReflection.SetActive(false);
-            painting4.SetActive(false);
+            painting4.SetActive(true);
             fireplace.SetActive(false);
         }
 
@@ -63,12 +63,12 @@ public class ObjManagerLevel5 : MonoBehaviour
             Wall3.SetActive(true);
             Wall4.SetActive(false);
 
+            PicFrameFancy.SetActive(false);
             door.SetActive(false);
-            painting1.SetActive(false);
-            cupboard1.SetActive(false);
-            plant1.SetActive(false);
+            painting1.SetActive(true);
+            cupboard1.SetActive(true);
             bed.SetActive(true);
-            painting2.SetActive(true);
+            painting2.SetActive(false);
             plant2.SetActive(true);
             cupboard2.SetActive(true);
             lamp.SetActive(true);
@@ -76,7 +76,7 @@ public class ObjManagerLevel5 : MonoBehaviour
             curtain2.SetActive(true);
             mirror.SetActive(true);
             mirrorReflection.SetActive(true);
-            painting4.SetActive(false);
+            painting4.SetActive(true);
             fireplace.SetActive(false);
         }
 
@@ -88,12 +88,12 @@ public class ObjManagerLevel5 : MonoBehaviour
             Wall3.SetActive(true);
             Wall4.SetActive(true);
 
+            PicFrameFancy.SetActive(false);
             door.SetActive(false);
             painting1.SetActive(false);
             cupboard1.SetActive(false);
-            plant1.SetActive(false);
             bed.SetActive(false);
-            painting2.SetActive(false);
+            painting2.SetActive(true);
             plant2.SetActive(false);
             cupboard2.SetActive(false);
             lamp.SetActive(false);
@@ -101,7 +101,7 @@ public class ObjManagerLevel5 : MonoBehaviour
             curtain2.SetActive(true);
             mirror.SetActive(true);
             mirrorReflection.SetActive(true);
-            painting4.SetActive(true);
+            painting4.SetActive(false);
             fireplace.SetActive(true);
         }
 
@@ -113,12 +113,12 @@ public class ObjManagerLevel5 : MonoBehaviour
             Wall3.SetActive(false);
             Wall4.SetActive(true);
 
+            PicFrameFancy.SetActive(true);
             door.SetActive(true);
-            painting1.SetActive(true);
-            cupboard1.SetActive(true);
-            plant1.SetActive(true);
+            painting1.SetActive(false);
+            cupboard1.SetActive(false);
             bed.SetActive(false);
-            painting2.SetActive(false);
+            painting2.SetActive(true);
             plant2.SetActive(false);
             cupboard2.SetActive(false);
             lamp.SetActive(false);
@@ -126,7 +126,7 @@ public class ObjManagerLevel5 : MonoBehaviour
             curtain2.SetActive(false);
             mirror.SetActive(false);
             mirrorReflection.SetActive(false);
-            painting4.SetActive(true);
+            painting4.SetActive(false);
             fireplace.SetActive(true);
         }
     }
