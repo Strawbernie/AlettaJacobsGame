@@ -11,6 +11,10 @@ public class MirrorTeleport : MonoBehaviour
     public GameObject levelChanger;
     public DisabledMode disabledMode;
     public FirstTimePassed firstTimePassed;
+    public CorrectAnswerCountry country;
+    public CorrectAnswerName Name;
+    public CorrectAnswerDate date;
+    public CorrectAnswerRole role;
     // Start is called before the first frame update
     private IEnumerator EnableStuffAfterDelay()
     {
@@ -24,16 +28,9 @@ public class MirrorTeleport : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == gameObject)
+        if (country.Nederland && Name.CorrectName && date.February && role.AlettaJacobs)
             {
-
                 StartCoroutine(EnableStuffAfterDelay());
             }
         }
     }
-}

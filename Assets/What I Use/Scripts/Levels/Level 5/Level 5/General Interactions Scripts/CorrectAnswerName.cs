@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CorrectAnswerRole : MonoBehaviour
+public class CorrectAnswerName : MonoBehaviour
 {
     public GameObject CorrectAnswer;
     public bool CorrectName;
