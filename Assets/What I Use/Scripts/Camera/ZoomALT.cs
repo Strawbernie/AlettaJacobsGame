@@ -37,6 +37,7 @@ public class ZoomALT : MonoBehaviour
 
     // Boolean that will allow the code to detect touch
     public bool objectTapDetectorActive = true;
+    public GameObject Particlesystem;
 
 
     private void Start()
@@ -75,6 +76,7 @@ public class ZoomALT : MonoBehaviour
                             // Disable the Swipe Detector and enable the Go Back button
                             disabledMode.swipeDisabled = true;
                             disabledMode.goBackDisabled = false;
+                            Destroy(Particlesystem);
 
                             // disable tap detector while zoomed in
                             objectTapDetectorActive = false;
@@ -143,7 +145,7 @@ public class ZoomALT : MonoBehaviour
         Vector3 currentPos = transform.position;
         Quaternion currentRot = transform.rotation;
         float currentSize = Camera.main.orthographicSize;
-
+   
         float t = 0;
         while (t < 1)
         {

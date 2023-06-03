@@ -30,6 +30,7 @@ public class ObjManagerLevel1 : MonoBehaviour
     public GameObject babyBottle;
     public GameObject ParticleSystem;
     public GameObject newspaper;
+    public GameObject ParticleSystemNews;
 
     // Level's walls
     public GameObject Wall1;
@@ -54,6 +55,7 @@ public class ObjManagerLevel1 : MonoBehaviour
             cupboard.SetActive(true);
             doll2.SetActive(true);
             newspaper.SetActive(true);
+            ParticleSystemNews.SetActive(true);
             chair.SetActive(true);
             clothes2.SetActive(true);
             plant.SetActive(true);
@@ -88,6 +90,7 @@ public class ObjManagerLevel1 : MonoBehaviour
             cupboard.SetActive(true);
             doll2.SetActive(true);
             newspaper.SetActive(true);
+            ParticleSystemNews.SetActive(true);
             chair.SetActive(true);
             clothes2.SetActive(true);
             plant.SetActive(true);
@@ -106,6 +109,7 @@ public class ObjManagerLevel1 : MonoBehaviour
             cubes2.SetActive(false);
             cubes3.SetActive(false);
             babyBottle.SetActive(false);
+
         }
 
         // Walls 34
@@ -122,6 +126,7 @@ public class ObjManagerLevel1 : MonoBehaviour
             cupboard.SetActive(false);
             doll2.SetActive(false);
             newspaper.SetActive(false);
+            ParticleSystemNews.SetActive(false);
             chair.SetActive(false);
             clothes2.SetActive(false);
             plant.SetActive(false);
@@ -156,6 +161,7 @@ public class ObjManagerLevel1 : MonoBehaviour
             cupboard.SetActive(false);
             doll2.SetActive(false);
             newspaper.SetActive(false);
+            ParticleSystemNews.SetActive(false);
             chair.SetActive(false);
             clothes2.SetActive(false);
             plant.SetActive(false);

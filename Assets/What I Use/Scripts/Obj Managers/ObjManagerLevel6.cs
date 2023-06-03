@@ -27,6 +27,7 @@ public class ObjManagerLevel6 : MonoBehaviour
     public GameObject painting2;
     public GameObject paper;
     public GameObject plant2;
+    public GameObject PSDesk;
 
     // Level's walls
     public GameObject Wall1;
@@ -58,6 +59,7 @@ public class ObjManagerLevel6 : MonoBehaviour
             painting2.SetActive(true);
             poster.SetActive(false);
             desk.SetActive(false);
+            PSDesk.SetActive(false);
             paper.SetActive(false);
             quack.SetActive(false);
             pen.SetActive(false);
@@ -90,6 +92,7 @@ public class ObjManagerLevel6 : MonoBehaviour
             painting2.SetActive(true);
             poster.SetActive(true);
             desk.SetActive(true);
+            PSDesk.SetActive(true);
             paper.SetActive(true);
             quack.SetActive(true);
             pen.SetActive(true);
@@ -122,6 +125,7 @@ public class ObjManagerLevel6 : MonoBehaviour
             painting2.SetActive(false);
             poster.SetActive(true);
             desk.SetActive(true);
+            PSDesk.SetActive(true);
             paper.SetActive(true);
             quack.SetActive(true);
             pen.SetActive(true);
@@ -154,6 +158,7 @@ public class ObjManagerLevel6 : MonoBehaviour
             painting2.SetActive(false);
             poster.SetActive(false);
             desk.SetActive(false);
+            PSDesk.SetActive(false);
             paper.SetActive(false);
             quack.SetActive(false);
             pen.SetActive(false);

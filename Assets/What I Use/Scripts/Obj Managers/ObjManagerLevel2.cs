@@ -30,6 +30,7 @@ public class ObjManagerLevel2 : MonoBehaviour
     public GameObject KeyParticleSystem;
     public GameObject Key;
     public GameObject Pills;
+    public GameObject PSPills;
 
     // Level's walls
     public GameObject Wall1;
@@ -52,6 +53,7 @@ public class ObjManagerLevel2 : MonoBehaviour
             painting1.SetActive(true);
             cupboard.SetActive(true);
             Pills.SetActive(true);
+            PSPills.SetActive(true);
             painting2.SetActive(true);
             book.SetActive(true);
             plant.SetActive(true);
@@ -81,6 +83,7 @@ public class ObjManagerLevel2 : MonoBehaviour
             painting1.SetActive(false);
             cupboard.SetActive(true);
             Pills.SetActive(true);
+            PSPills.SetActive(true);
             painting2.SetActive(true);
             book.SetActive(false);
             plant.SetActive(true);
@@ -110,6 +113,7 @@ public class ObjManagerLevel2 : MonoBehaviour
             painting1.SetActive(false);
             cupboard.SetActive(false);
             Pills.SetActive(false);
+            PSPills.SetActive(false);
             painting2.SetActive(false);
             book.SetActive(false); 
             plant.SetActive(false);
@@ -139,6 +143,7 @@ public class ObjManagerLevel2 : MonoBehaviour
             painting1.SetActive(true);
             cupboard.SetActive(false);
             Pills.SetActive(false);
+            PSPills.SetActive(false);
             painting2.SetActive(false);
             book.SetActive(false);
             plant.SetActive(false);

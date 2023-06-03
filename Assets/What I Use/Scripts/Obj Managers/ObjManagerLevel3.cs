@@ -20,6 +20,7 @@ public class ObjManagerLevel3 : MonoBehaviour
     public GameObject plant;
     public GameObject objectsOnDisplay;
     public GameObject ParticleSystem;
+    public GameObject PSModel;
 
     // Update is called once per frame
     void Update()
@@ -34,6 +35,7 @@ public class ObjManagerLevel3 : MonoBehaviour
             ParticleSystem.SetActive(true);
             display.SetActive(true);
             HModel.SetActive(true);
+            PSModel.SetActive(true);
             poster.SetActive(true);
             glass.SetActive(true);
             curtain1.SetActive(true);
@@ -53,6 +55,7 @@ public class ObjManagerLevel3 : MonoBehaviour
             ParticleSystem.SetActive(false);
             display.SetActive(false);
             HModel.SetActive(false);
+            PSModel.SetActive(false);
             poster.SetActive(false);
             glass.SetActive(false);
             curtain1.SetActive(false);
@@ -72,6 +75,7 @@ public class ObjManagerLevel3 : MonoBehaviour
             ParticleSystem.SetActive(false);
             display.SetActive(false);
             HModel.SetActive(false);
+            PSModel.SetActive(false);
             poster.SetActive(false);
             glass.SetActive(false);
             curtain1.SetActive(false);
@@ -91,6 +95,7 @@ public class ObjManagerLevel3 : MonoBehaviour
             ParticleSystem.SetActive(true);
             display.SetActive(true);
             HModel.SetActive(true);
+            PSModel.SetActive(true);
             poster.SetActive(true); 
             glass.SetActive(true);
             curtain1.SetActive(true);
