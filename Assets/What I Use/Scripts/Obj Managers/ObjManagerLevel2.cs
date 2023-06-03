@@ -80,11 +80,11 @@ public class ObjManagerLevel2 : MonoBehaviour
             Wall4.SetActive(true);
 
             door.SetActive(false);
-            painting1.SetActive(false);
+            painting1.SetActive(true);
             cupboard.SetActive(true);
             Pills.SetActive(true);
             PSPills.SetActive(true);
-            painting2.SetActive(true);
+            painting2.SetActive(false);
             book.SetActive(false);
             plant.SetActive(true);
             chair.SetActive(true);
@@ -94,7 +94,7 @@ public class ObjManagerLevel2 : MonoBehaviour
             books.SetActive(true);
             pen.SetActive(true);
             ink.SetActive(true);
-            painting3.SetActive(true);
+            painting3.SetActive(false);
             curtains.SetActive(true);
             painting41.SetActive(false);
             painting42.SetActive(false);
@@ -140,11 +140,11 @@ public class ObjManagerLevel2 : MonoBehaviour
             Wall4.SetActive(false);
 
             door.SetActive(true);
-            painting1.SetActive(true);
+            painting1.SetActive(false);
             cupboard.SetActive(false);
             Pills.SetActive(false);
             PSPills.SetActive(false);
-            painting2.SetActive(false);
+            painting2.SetActive(true);
             book.SetActive(false);
             plant.SetActive(false);
             chair.SetActive(false);
@@ -154,7 +154,7 @@ public class ObjManagerLevel2 : MonoBehaviour
             books.SetActive(false);
             pen.SetActive(false);
             ink.SetActive(false);
-            painting3.SetActive(false);
+            painting3.SetActive(true);
             curtains.SetActive(false);
             painting41.SetActive(true);
             painting42.SetActive(true);
