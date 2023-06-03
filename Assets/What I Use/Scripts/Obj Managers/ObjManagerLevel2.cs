@@ -44,10 +44,10 @@ public class ObjManagerLevel2 : MonoBehaviour
         // Walls 12
         if (Camera.main.transform.localEulerAngles.y > -90.0f && Camera.main.transform.localEulerAngles.y < 90.0f)
         {
-            Wall1.SetActive(true);
-            Wall2.SetActive(true);
-            Wall3.SetActive(false);
-            Wall4.SetActive(false);
+            Wall1.SetActive(false);
+            Wall2.SetActive(false);
+            Wall3.SetActive(true);
+            Wall4.SetActive(true);
 
             door.SetActive(true);
             painting1.SetActive(true);
@@ -74,10 +74,10 @@ public class ObjManagerLevel2 : MonoBehaviour
         // Walls 23
         else if (Camera.main.transform.localEulerAngles.y > 0.0f && Camera.main.transform.localEulerAngles.y < 180.0f)
         {
-            Wall1.SetActive(false);
-            Wall2.SetActive(true);
-            Wall3.SetActive(true);
-            Wall4.SetActive(false);
+            Wall1.SetActive(true);
+            Wall2.SetActive(false);
+            Wall3.SetActive(false);
+            Wall4.SetActive(true);
 
             door.SetActive(false);
             painting1.SetActive(false);
@@ -104,10 +104,10 @@ public class ObjManagerLevel2 : MonoBehaviour
         // Walls 34
         else if (Camera.main.transform.localEulerAngles.y > 90.0f && Camera.main.transform.localEulerAngles.y < 270.0f)
         {
-            Wall1.SetActive(false);
-            Wall2.SetActive(false);
-            Wall3.SetActive(true);
-            Wall4.SetActive(true);
+            Wall1.SetActive(true);
+            Wall2.SetActive(true);
+            Wall3.SetActive(false);
+            Wall4.SetActive(false);
 
             door.SetActive(false);
             painting1.SetActive(false);
@@ -134,10 +134,10 @@ public class ObjManagerLevel2 : MonoBehaviour
         // Walls 41
         else
         {
-            Wall1.SetActive(true);
-            Wall2.SetActive(false);
-            Wall3.SetActive(false);
-            Wall4.SetActive(true);
+            Wall1.SetActive(false);
+            Wall2.SetActive(true);
+            Wall3.SetActive(true);
+            Wall4.SetActive(false);
 
             door.SetActive(true);
             painting1.SetActive(true);
