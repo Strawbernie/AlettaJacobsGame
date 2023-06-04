@@ -10033,8 +10033,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.024353, y: 0.15171325, z: 1.012939}
-  m_Center: {x: -2.119156, y: 1.1199708, z: 0.4129113}
+  m_Size: {x: 1.1012802, y: 0.1736989, z: 1.012939}
+  m_Center: {x: -2.117342, y: 1.2814953, z: 0.4129113}
 --- !u!1 &842327852
 GameObject:
   m_ObjectHideFlags: 0
@@ -13913,12 +13913,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b92e1caac4c1d489721d9541c1b2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera4: {fileID: 1678185548}
-  disabledMode: {fileID: 1706687911}
+  rotationSpeed: 90
   SwipeTutorial: {fileID: 95724238}
   MainMenu: {fileID: 732450430}
   pauseMenu: {fileID: 581966236}
   Confirmmenu: {fileID: 522189882}
+  camera4: {fileID: 1678185548}
+  isRotating: 0
+  disabledMode: {fileID: 1706687911}
 --- !u!1001 &1182005131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18517,7 +18519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1580101156
 Transform:
   m_ObjectHideFlags: 0
