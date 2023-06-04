@@ -10,18 +10,15 @@ public class ObjManagerLevel2 : MonoBehaviour
     public GameObject cupboard;
     public GameObject painting2;
     public GameObject book;
-    public GameObject plant;
     public GameObject chair;
     public GameObject desk;
     public GameObject books;
     public GameObject pen;
     public GameObject ink;
     public GameObject painting3;
-    public GameObject curtains;
+    public GameObject curtains2;
     public GameObject quack;
     public GameObject bed;
-    public GameObject painting41;
-    public GameObject painting42;
     public GameObject blueBook;
     public GameObject brownBook;
     public GameObject greenBook;
@@ -31,6 +28,7 @@ public class ObjManagerLevel2 : MonoBehaviour
     public GameObject Key;
     public GameObject Pills;
     public GameObject PSPills;
+    public GameObject Lamp;
 
     // Level's walls
     public GameObject Wall1;
@@ -48,7 +46,7 @@ public class ObjManagerLevel2 : MonoBehaviour
             Wall2.SetActive(false);
             Wall3.SetActive(true);
             Wall4.SetActive(true);
-
+            curtains2.SetActive(false);
             door.SetActive(true);
             painting1.SetActive(true);
             cupboard.SetActive(true);
@@ -56,7 +54,6 @@ public class ObjManagerLevel2 : MonoBehaviour
             PSPills.SetActive(true);
             painting2.SetActive(true);
             book.SetActive(true);
-            plant.SetActive(true);
             chair.SetActive(false);
             KeyParticleSystem.SetActive(false);
             Key.SetActive(false);
@@ -65,10 +62,8 @@ public class ObjManagerLevel2 : MonoBehaviour
             pen.SetActive(false);
             ink.SetActive(false);
             painting3.SetActive(false);
-            curtains.SetActive(false);
-            painting41.SetActive(false);
-            painting42.SetActive(false);
             bedTable.SetActive(false);
+            Lamp.SetActive(false);
         }
 
         // Walls 23
@@ -78,7 +73,7 @@ public class ObjManagerLevel2 : MonoBehaviour
             Wall2.SetActive(false);
             Wall3.SetActive(false);
             Wall4.SetActive(true);
-
+            curtains2.SetActive(true);
             door.SetActive(false);
             painting1.SetActive(true);
             cupboard.SetActive(true);
@@ -86,7 +81,6 @@ public class ObjManagerLevel2 : MonoBehaviour
             PSPills.SetActive(true);
             painting2.SetActive(false);
             book.SetActive(false);
-            plant.SetActive(true);
             chair.SetActive(true);
             KeyParticleSystem.SetActive(true);
             Key.SetActive(true);
@@ -95,10 +89,8 @@ public class ObjManagerLevel2 : MonoBehaviour
             pen.SetActive(true);
             ink.SetActive(true);
             painting3.SetActive(false);
-            curtains.SetActive(true);
-            painting41.SetActive(false);
-            painting42.SetActive(false);
             bedTable.SetActive(false);
+            Lamp.SetActive(false);
         }
 
         // Walls 34
@@ -108,7 +100,7 @@ public class ObjManagerLevel2 : MonoBehaviour
             Wall2.SetActive(true);
             Wall3.SetActive(false);
             Wall4.SetActive(false);
-
+            curtains2.SetActive(true);
             door.SetActive(false);
             painting1.SetActive(false);
             cupboard.SetActive(false);
@@ -116,7 +108,6 @@ public class ObjManagerLevel2 : MonoBehaviour
             PSPills.SetActive(false);
             painting2.SetActive(false);
             book.SetActive(false); 
-            plant.SetActive(false);
             chair.SetActive(true);
             KeyParticleSystem.SetActive(true);
             Key.SetActive(true);
@@ -125,10 +116,8 @@ public class ObjManagerLevel2 : MonoBehaviour
             pen.SetActive(true);
             ink.SetActive(true);
             painting3.SetActive(true);
-            curtains.SetActive(true);
-            painting41.SetActive(true);
-            painting42.SetActive(true);
             bedTable.SetActive(true);
+            Lamp.SetActive(true);
         }
 
         // Walls 41
@@ -138,7 +127,7 @@ public class ObjManagerLevel2 : MonoBehaviour
             Wall2.SetActive(true);
             Wall3.SetActive(true);
             Wall4.SetActive(false);
-
+            curtains2.SetActive(false);
             door.SetActive(true);
             painting1.SetActive(false);
             cupboard.SetActive(false);
@@ -146,7 +135,6 @@ public class ObjManagerLevel2 : MonoBehaviour
             PSPills.SetActive(false);
             painting2.SetActive(true);
             book.SetActive(false);
-            plant.SetActive(false);
             chair.SetActive(false);
             KeyParticleSystem.SetActive(false);
             Key.SetActive(false);
@@ -155,10 +143,8 @@ public class ObjManagerLevel2 : MonoBehaviour
             pen.SetActive(false);
             ink.SetActive(false);
             painting3.SetActive(true);
-            curtains.SetActive(false);
-            painting41.SetActive(true);
-            painting42.SetActive(true);
             bedTable.SetActive(true);
+            Lamp.SetActive(true);
         }
     }
 }
