@@ -80,7 +80,7 @@ public class ObjManagerLevel2 : MonoBehaviour
             Pills.SetActive(true);
             PSPills.SetActive(true);
             painting2.SetActive(false);
-            book.SetActive(false);
+            book.SetActive(true);
             chair.SetActive(true);
             KeyParticleSystem.SetActive(true);
             Key.SetActive(true);
