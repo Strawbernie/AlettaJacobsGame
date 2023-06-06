@@ -2486,6 +2486,10 @@ MonoBehaviour:
   ButtonToActivate: {fileID: 1316480229}
   ButtonToDisable: {fileID: 159275808}
   WinCheck: {fileID: 1404225588}
+  camera6: {fileID: 0}
+  camera7: {fileID: 0}
+  Hint: {fileID: 0}
+  disabledMode: {fileID: 0}
   objectTapDetectorActive: 1
   HintPanel: {fileID: 520573593}
 --- !u!1 &159695644
@@ -4333,6 +4337,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 818654923}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &370240499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314186026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46a885763d2b2740b0a08e5990929a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinCheck: {fileID: 1404225588}
+  camera6: {fileID: 1922714813}
+  camera7: {fileID: 374543530}
+  Hint: {fileID: 1967182308}
+  disabledMode: {fileID: 1706687911}
+  objectTapDetectorActive: 1
+  HintPanel: {fileID: 520573593}
+  levelChanger: {fileID: 472877467}
 --- !u!1001 &371858444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4469,6 +4493,90 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8091835, y: 3.193898, z: 1.866451}
   m_Center: {x: 0.05352409, y: 1.0969485, z: -0.17595519}
+--- !u!1 &374543530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 374543533}
+  - component: {fileID: 374543532}
+  - component: {fileID: 374543531}
+  m_Layer: 0
+  m_Name: Camera 7
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!81 &374543531
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374543530}
+  m_Enabled: 1
+--- !u!20 &374543532
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374543530}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.16862746, g: 0.16862746, b: 0.16862746, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: -100
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 4
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &374543533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374543530}
+  m_LocalRotation: {x: 0.55922455, y: -0.08797267, z: -0.058738086, w: 0.82224}
+  m_LocalPosition: {x: -53.4, y: 6.6, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 65.409, y: -30.365, z: -27.941}
 --- !u!1 &376583546
 GameObject:
   m_ObjectHideFlags: 0
@@ -5142,7 +5250,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &456326069 stripped
 GameObject:
@@ -7303,6 +7411,10 @@ MonoBehaviour:
   ButtonToActivate: {fileID: 991618165}
   ButtonToDisable: {fileID: 572692498}
   WinCheck: {fileID: 1404225588}
+  camera6: {fileID: 0}
+  camera7: {fileID: 0}
+  Hint: {fileID: 0}
+  disabledMode: {fileID: 0}
   objectTapDetectorActive: 1
   HintPanel: {fileID: 520573593}
 --- !u!1 &581966236
@@ -9212,6 +9324,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762432205}
   m_CullTransparentMesh: 1
+--- !u!1001 &764741667
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1241328120}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.52
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+        type: 3}
+      propertyPath: m_Name
+      value: ending+anim
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 683b0a63687c4094482f0eabe1fe8b1d, type: 3}
 --- !u!1 &767637849 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -397435567483277256, guid: 8330f4bf4d99a824f86692cb5f1eedb5,
@@ -11683,7 +11864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
@@ -12051,6 +12232,10 @@ MonoBehaviour:
   ButtonToActivate: {fileID: 1686689250}
   ButtonToDisable: {fileID: 991618165}
   WinCheck: {fileID: 1404225588}
+  camera6: {fileID: 0}
+  camera7: {fileID: 0}
+  Hint: {fileID: 0}
+  disabledMode: {fileID: 0}
   objectTapDetectorActive: 1
   HintPanel: {fileID: 520573593}
 --- !u!1 &995403624
@@ -13373,12 +13558,12 @@ PrefabInstance:
     - target: {fileID: 8019465221127182292, guid: 8422adab636a635409545ecd6c687870,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.07157962
+      value: 0.118844174
       objectReference: {fileID: 0}
     - target: {fileID: 8019465221127182292, guid: 8422adab636a635409545ecd6c687870,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.06438524
+      value: 0.11842489
       objectReference: {fileID: 0}
     - target: {fileID: 8019465221127182292, guid: 8422adab636a635409545ecd6c687870,
         type: 3}
@@ -13388,17 +13573,17 @@ PrefabInstance:
     - target: {fileID: 8019465221127182292, guid: 8422adab636a635409545ecd6c687870,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.0144238025
+      value: -0.0091988705
       objectReference: {fileID: 0}
     - target: {fileID: 8019465221127182292, guid: 8422adab636a635409545ecd6c687870,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.024692621
+      value: 0.021658795
       objectReference: {fileID: 0}
     - target: {fileID: 8019465221127182292, guid: 8422adab636a635409545ecd6c687870,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.008264538
+      value: 0.008264537
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8422adab636a635409545ecd6c687870, type: 3}
@@ -13424,6 +13609,10 @@ MonoBehaviour:
   ButtonToActivate: {fileID: 0}
   ButtonToDisable: {fileID: 1114212940}
   WinCheck: {fileID: 1404225588}
+  camera6: {fileID: 1922714813}
+  camera7: {fileID: 374543530}
+  Hint: {fileID: 1967182308}
+  disabledMode: {fileID: 1706687911}
   objectTapDetectorActive: 1
   HintPanel: {fileID: 520573593}
 --- !u!1 &1117301023
@@ -14277,6 +14466,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 581966236}
   Confirmmenu: {fileID: 522189882}
   camera4: {fileID: 1678185548}
+  camera7: {fileID: 374543530}
   isRotating: 0
   disabledMode: {fileID: 1706687911}
 --- !u!1001 &1182005131
@@ -14613,6 +14803,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1183354067}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1203773934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 764741667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1203773935 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 683b0a63687c4094482f0eabe1fe8b1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 764741667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1203773936
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203773934}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ebcd1ad2f6c42e4478f97e9af4c1f326, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1204332000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4829472063750999846, guid: c9e4323fe420b194ba9418bebe5632a9,
@@ -14984,6 +15206,53 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 502222555}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1241328118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1241328120}
+  - component: {fileID: 1241328119}
+  m_Layer: 0
+  m_Name: LEVEL7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1241328119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241328118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def69046b7ee79040ba682f77757e337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Book: {fileID: 1203773934}
+  camera7: {fileID: 374543530}
+--- !u!4 &1241328120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241328118}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -25.6, y: 7.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1203773935}
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1259106138 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8394432774252077973, guid: bc204deeb39bc064aa207d967f556e45,
@@ -16401,6 +16670,10 @@ MonoBehaviour:
   ButtonToActivate: {fileID: 1114212940}
   ButtonToDisable: {fileID: 1316480229}
   WinCheck: {fileID: 1404225588}
+  camera6: {fileID: 0}
+  camera7: {fileID: 0}
+  Hint: {fileID: 0}
+  disabledMode: {fileID: 0}
   objectTapDetectorActive: 1
   HintPanel: {fileID: 520573593}
 --- !u!1 &1318843993 stripped
@@ -17926,6 +18199,10 @@ MonoBehaviour:
   ButtonToActivate: {fileID: 1509842989}
   ButtonToDisable: {fileID: 1457490989}
   WinCheck: {fileID: 1404225588}
+  camera6: {fileID: 0}
+  camera7: {fileID: 0}
+  Hint: {fileID: 0}
+  disabledMode: {fileID: 0}
   objectTapDetectorActive: 1
   HintPanel: {fileID: 520573593}
 --- !u!1 &1458780890
@@ -18148,6 +18425,10 @@ MonoBehaviour:
   ButtonToActivate: {fileID: 572692498}
   ButtonToDisable: {fileID: 1509842989}
   WinCheck: {fileID: 1404225588}
+  camera6: {fileID: 0}
+  camera7: {fileID: 0}
+  Hint: {fileID: 0}
+  disabledMode: {fileID: 0}
   objectTapDetectorActive: 1
   HintPanel: {fileID: 520573593}
 --- !u!1 &1510043106
@@ -19749,7 +20030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1678185549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19906,6 +20187,10 @@ MonoBehaviour:
   ButtonToActivate: {fileID: 159275808}
   ButtonToDisable: {fileID: 1686689250}
   WinCheck: {fileID: 1404225588}
+  camera6: {fileID: 0}
+  camera7: {fileID: 0}
+  Hint: {fileID: 0}
+  disabledMode: {fileID: 0}
   objectTapDetectorActive: 1
   HintPanel: {fileID: 520573593}
 --- !u!1 &1706687909

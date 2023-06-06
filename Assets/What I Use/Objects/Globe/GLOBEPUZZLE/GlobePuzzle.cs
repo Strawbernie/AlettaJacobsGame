@@ -8,6 +8,11 @@ public class GlobePuzzle : MonoBehaviour
     public GameObject ButtonToActivate;
     public GameObject ButtonToDisable;
     public GameObject WinCheck;
+    public GameObject camera6;
+    public GameObject camera7;
+    public GameObject Hint;
+    Animator animator;
+    public DisabledMode disabledMode;
     //public GameObject globeCamera;
     public bool objectTapDetectorActive = true;
     public GameObject HintPanel;
@@ -33,19 +38,13 @@ public class GlobePuzzle : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == ButtonToDisable)
                 {
-                    if (ButtonToDisable.activeSelf)
+                     if (ButtonToDisable.activeSelf)
                     {
                         FlagToActivate.SetActive(true);
                         ButtonToActivate.SetActive(true);
                         ButtonToDisable.SetActive(false);
                     }
-
-                    if (WinCheck.activeSelf)
-                    {
-                        HintPanel.SetActive(false);
-                    }
                 }
-
             }
         }
     }
