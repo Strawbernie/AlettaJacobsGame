@@ -8,21 +8,34 @@ public class Correct4 : MonoBehaviour
     public FirstTimePassed firstTimePassed;
     public GameObject camera4;
     public GameObject camera5;
+    public GameObject UpButton;
+    public GameObject DownButton;
+    public GameObject HandIn;
 
     Animator animator;
     public GameObject levelChanger;
 
-    public GameObject setTrue;
-    public GameObject setFalse;
-    public GameObject setFalse1;
-    public GameObject setFalse2;
     public GameObject C1;
     public GameObject C2;
     public GameObject C3;
     public GameObject C4;
-    public GameObject Button;
     public GameObject ParticleSystem;
     public GameObject HintPanel;
+
+    //Reset answers
+    public GameObject C2A;
+    public GameObject C3A;
+    public GameObject C4A;
+    public GameObject C1B;
+    public GameObject C3B;
+    public GameObject C4B;
+    public GameObject C1C;
+    public GameObject C2C;
+    public GameObject C4C;
+    public GameObject C2D;
+    public GameObject C3D;
+    public GameObject C4D;
+
     // Boolean that will allow the code to detect touch
     public bool objectTapDetectorActive = true;
 
@@ -34,6 +47,9 @@ public class Correct4 : MonoBehaviour
         Destroy(ParticleSystem);
         camera4.SetActive(false);
         camera5.SetActive(true);
+        HandIn.SetActive(false);
+        UpButton.SetActive(false);
+        DownButton.SetActive(false);
     }
 
     public void Start()
@@ -42,7 +58,7 @@ public class Correct4 : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Update()
+    public void OnButtonPress()
     {
         if (firstTimePassed.firstTimeLevel4)
         {
@@ -55,19 +71,24 @@ public class Correct4 : MonoBehaviour
                     StartCoroutine(EnableStuffAfterDelay());
                     HintPanel.SetActive(false);
                 }
-
-                if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+                else
                 {
-                    Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-                    RaycastHit hit;
-
-                    if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == Button)
-                    {
-                        setTrue.SetActive(true);
-                        setFalse.SetActive(false);
-                        setFalse1.SetActive(false);
-                        setFalse2.SetActive(false);
-                    }
+                    C1.SetActive(false);
+                    C2.SetActive(false);
+                    C3.SetActive(false);
+                    C4.SetActive(false);
+                    C2A.SetActive(false);
+                    C3A.SetActive(false);
+                    C4A.SetActive(false);
+                    C1B.SetActive(false);
+                    C3B.SetActive(false);
+                    C4B.SetActive(false);
+                    C1C.SetActive(false);
+                    C2C.SetActive(false);
+                    C4C.SetActive(false);
+                    C2D.SetActive(false);
+                    C3D.SetActive(false);
+                    C4D.SetActive(false);
                 }
             }
         }

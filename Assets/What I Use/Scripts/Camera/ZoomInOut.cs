@@ -51,6 +51,7 @@ public class ZoomInOut : MonoBehaviour
     public GameObject ccamera2;
     public GameObject Text;
 
+
     private void Start()
     {
         // Assign code to a button
