@@ -16,6 +16,7 @@ public class SwipeDetector : MonoBehaviour
     public GameObject Confirmmenu;
     public GameObject camera4;
     public GameObject camera7;
+    public bool GlobeZoom;
     public bool isRotating = false;
     private Quaternion targetRotation;
 
@@ -31,7 +32,7 @@ public class SwipeDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!camera4.activeSelf && !camera7.activeSelf && !MainMenu.activeSelf && !pauseMenu.activeSelf && !Confirmmenu.activeSelf)
+        if(!camera4.activeSelf && !camera7.activeSelf && !MainMenu.activeSelf && !pauseMenu.activeSelf && !Confirmmenu.activeSelf && !GlobeZoom == true)
         {
             if (!disabledMode.swipeDisabled)
             {

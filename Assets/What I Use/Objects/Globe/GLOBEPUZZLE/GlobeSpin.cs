@@ -9,12 +9,15 @@ public class GlobeSpin : MonoBehaviour
     private Vector2 swipeStartPosition;
     private bool isSwiping = false;
     public GameObject ParticleSystem;
+    public DisabledMode disabledMode;
+    public SwipeDetector SD;
 
-    void Update()
+    public void Update()
     {
         //checks if the camera is in the position where the puzzle will take place
         if (Camera.main.transform.localEulerAngles.y > 131.5f && Camera.main.transform.localEulerAngles.y < 133.5f)
         {
+
             Destroy(ParticleSystem);
             //if the player touches the screen
             if (Input.touchCount > 0)
@@ -43,6 +46,10 @@ public class GlobeSpin : MonoBehaviour
                         break;
                 }
             }
+        }
+        else
+        {
+            SD.GlobeZoom = false;
         }
     }
 }

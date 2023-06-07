@@ -3990,6 +3990,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ParticleSystem: {fileID: 1750873998}
+  disabledMode: {fileID: 0}
+  SD: {fileID: 0}
 --- !u!1 &314436473
 GameObject:
   m_ObjectHideFlags: 0
@@ -4480,6 +4482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ParticleSystem: {fileID: 0}
+  disabledMode: {fileID: 0}
+  SD: {fileID: 0}
 --- !u!65 &371858447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14467,6 +14471,7 @@ MonoBehaviour:
   Confirmmenu: {fileID: 522189882}
   camera4: {fileID: 1678185548}
   camera7: {fileID: 374543530}
+  GlobeZoom: 0
   isRotating: 0
   disabledMode: {fileID: 1706687911}
 --- !u!1001 &1182005131
