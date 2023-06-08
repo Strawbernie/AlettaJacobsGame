@@ -1,4 +1,5 @@
 using System.Collections;
+using PixelCrushers.DialogueSystem;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -198,35 +199,41 @@ public class TimelineButtons : MonoBehaviour
     {
         anim.SetTrigger("FadeOut");
         StartCoroutine(EnableStuffAfterDelay1());
+        DialogueManager.StopConversation();
     }
 
     public void Level2Button()
     {
         anim.SetTrigger("FadeOut");
         StartCoroutine(EnableStuffAfterDelay2());
+        DialogueManager.StopConversation();
     }
 
     public void Level3Button()
     {
         anim.SetTrigger("FadeOut");
         StartCoroutine(EnableStuffAfterDelay3());
+        DialogueManager.StopConversation();
     }
 
     public void Level4Button()
     {
         anim.SetTrigger("FadeOut");
         StartCoroutine(EnableStuffAfterDelay4());
+        DialogueManager.StopConversation();
     }
 
     public void Level5Button()
     {
         anim.SetTrigger("FadeOut");
         StartCoroutine(EnableStuffAfterDelay5());
+        DialogueManager.StopConversation();
     }
 
     public void Level6Button()
     {
         anim.SetTrigger("FadeOut");
         StartCoroutine(EnableStuffAfterDelay6());
+        DialogueManager.StopConversation();
     }
 }

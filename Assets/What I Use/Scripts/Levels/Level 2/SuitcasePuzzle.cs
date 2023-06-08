@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -49,6 +50,7 @@ public class SuitcasePuzzle : MonoBehaviour
         camera3.SetActive(true);
         HintPanel.SetActive(false);
         Hint.SetActive(false);
+        DialogueManager.StartConversation("Level3Start");
     }
 
     private void Start()
@@ -83,6 +85,9 @@ public class SuitcasePuzzle : MonoBehaviour
                 animator.SetTrigger("FadeOut");
                 HintPanel.SetActive(false);
                 StartCoroutine(EnableStuffAfterDelay());
+
+                DialogueManager.StopConversation();
+                firstTimePassed.firstTimeLevel2 = false;
             }
         }
     }

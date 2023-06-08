@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,6 +33,7 @@ public class ChestPuzzle : MonoBehaviour
         camera3.SetActive(false);
         camera4.SetActive(true);
         Destroy(ParticleSystem);
+        DialogueManager.StartConversation("Level4Start");
     }
 
     // Start is called before the first frame update
@@ -52,10 +54,14 @@ public class ChestPuzzle : MonoBehaviour
                 RaycastHit hit;
 
                 if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == gameObject)
+
                 {
                     HintPanel.SetActive(false);
                     firstTimePassed.firstTimeLevel3 = false;
                     StartCoroutine(EnableStuffAfterDelay());
+
+                    DialogueManager.StopConversation();
+                    firstTimePassed.firstTimeLevel3 = false;
                 }
             }
         }

@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -50,7 +51,6 @@ public class ZoomInOut : MonoBehaviour
     public DragAndDrop DD;
     public GameObject ccamera2;
     public GameObject Text;
-
 
     private void Start()
     {
@@ -141,10 +141,21 @@ public class ZoomInOut : MonoBehaviour
                             if (!isChanging)
                             {
                                 // Zoom in
+
                                 invWalls.SetActive(true);
+                                DialogueManager.StopConversation();
                                 StartCoroutine(SmoothCameraChange(newPosition, newRotation, newOrthoSize));
                                 isAtOriginalPosition = false;
                                 //checks if camera2 is active to set the suitcase tutorial active
+                                if (gameObject == camera3.gameObject)
+                                {
+                                    DialogueManager.StartConversation("Level3Drawer");
+                                }
+                                if (gameObject == camera5.gameObject)
+                                {
+                                    DialogueManager.StartConversation("Level5Elections");
+                                }
+
                                 if (ccamera2.activeSelf)
                                 {
                                     DD.Tutorial.SetActive(true);
@@ -196,7 +207,7 @@ public class ZoomInOut : MonoBehaviour
     private IEnumerator DelayForEnableSwipeDetector()
     {
         disabledMode.zoomDisabled = true;
-        yield return new WaitForSeconds(0.5f); 
+        yield return new WaitForSeconds(0.5f);
         disabledMode.zoomDisabled = false;
         disabledMode.goBackDisabled = true;
         disabledMode.swipeDisabled = false;
@@ -238,6 +249,7 @@ public class ZoomInOut : MonoBehaviour
     {
         if (gameObject.activeSelf)
         {
+            DialogueManager.StopConversation();
             // Pinch in (zoom out).
             if (!isChanging)
             {

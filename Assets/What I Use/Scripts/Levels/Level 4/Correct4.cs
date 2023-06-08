@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -50,6 +51,7 @@ public class Correct4 : MonoBehaviour
         HandIn.SetActive(false);
         UpButton.SetActive(false);
         DownButton.SetActive(false);
+        DialogueManager.StartConversation("Level5Start");
     }
 
     public void Start()
@@ -70,6 +72,7 @@ public class Correct4 : MonoBehaviour
                     animator.SetTrigger("FadeOut");
                     StartCoroutine(EnableStuffAfterDelay());
                     HintPanel.SetActive(false);
+                    DialogueManager.StopConversation();
                 }
                 else
                 {

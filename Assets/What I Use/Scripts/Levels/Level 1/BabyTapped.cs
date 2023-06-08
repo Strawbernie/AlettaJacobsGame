@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +25,8 @@ public class BabyTapped : MonoBehaviour
     public FirstTimePassed firstTimePassed;
     public GameObject ParticleSystem;
     public GameObject HintPanel;
+
+    [SerializeField] DialogueChecker dialogueChecker; // Add a reference to the correct dialogue checker.
     private IEnumerator EnableStuffAfterDelay()
     {
         yield return new WaitForSeconds(1f);
@@ -32,6 +35,7 @@ public class BabyTapped : MonoBehaviour
         camera1.SetActive(false);
         camera2.SetActive(true);
         Destroy(ParticleSystem);
+        DialogueManager.StartConversation("Level2 DialogueStart"); // Change this to the correct one for level 2el 2
     }
 
     private void Start()
@@ -55,7 +59,12 @@ public class BabyTapped : MonoBehaviour
                     babyBedAnim.isOpen = false;
                     animator.SetTrigger("FadeOut");
                     HintPanel.SetActive(false);
+                    DialogueManager.StopConversation();
                     StartCoroutine(EnableStuffAfterDelay());
+
+                    DialogueManager.StopConversation();
+                    firstTimePassed.firstTimeLevel1 = false;
+
                 }
             }
         }

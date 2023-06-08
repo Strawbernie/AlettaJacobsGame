@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,7 +55,7 @@ public class ZoomALT : MonoBehaviour
         lastRotation = originalRotation;
         lastOrthoSize = originalOrthoSize;
     }
-    
+
     void Update()
     {
         if (gameObject.activeSelf)
@@ -84,9 +85,11 @@ public class ZoomALT : MonoBehaviour
                             if (!isChanging)
                             {
                                 // Zoom in
+                                DialogueManager.StopConversation();
+                                DialogueManager.StartConversation("Level4Eye");
                                 StartCoroutine(SmoothCameraChange(newPosition, newRotation, newOrthoSize));
                                 isAtOriginalPosition = false;
-                                
+
                             }
                         }
                     }
@@ -145,7 +148,7 @@ public class ZoomALT : MonoBehaviour
         Vector3 currentPos = transform.position;
         Quaternion currentRot = transform.rotation;
         float currentSize = Camera.main.orthographicSize;
-   
+
         float t = 0;
         while (t < 1)
         {
