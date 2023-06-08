@@ -1,4 +1,5 @@
 using System.Collections;
+using PixelCrushers.DialogueSystem;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,9 @@ public class MirrorTeleport : MonoBehaviour
 {
     public GameObject camera5;
     public GameObject camera6;
+    public GameObject HintPanel;
 
+    Animator animator;
     public GameObject levelChanger;
     public DisabledMode disabledMode;
     public FirstTimePassed firstTimePassed;
@@ -24,13 +27,21 @@ public class MirrorTeleport : MonoBehaviour
         camera5.SetActive(false);
         camera6.SetActive(true);
     }
+    public void Start()
+    {
+        animator = levelChanger.GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (country.Nederland && Name.CorrectName && date.February && role.AlettaJacobs)
+        if (country.Nederland && Name.CorrectName && date.February && role.AlettaJacobs && firstTimePassed.firstTimeLevel6 == true)
             {
-                StartCoroutine(EnableStuffAfterDelay());
+            firstTimePassed.firstTimeLevel6 = false;
+            animator.SetTrigger("FadeOut");
+            StartCoroutine(EnableStuffAfterDelay());
+            HintPanel.SetActive(false);
+            DialogueManager.StopConversation();
             }
         }
     }

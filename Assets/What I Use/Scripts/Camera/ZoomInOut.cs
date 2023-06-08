@@ -1,6 +1,7 @@
 using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -51,6 +52,7 @@ public class ZoomInOut : MonoBehaviour
     public DragAndDrop DD;
     public GameObject ccamera2;
     public GameObject Text;
+    public GameObject ps;
 
     private void Start()
     {
@@ -144,6 +146,7 @@ public class ZoomInOut : MonoBehaviour
 
                                 invWalls.SetActive(true);
                                 DialogueManager.StopConversation();
+                                ps.SetActive(false);
                                 StartCoroutine(SmoothCameraChange(newPosition, newRotation, newOrthoSize));
                                 isAtOriginalPosition = false;
                                 //checks if camera2 is active to set the suitcase tutorial active
