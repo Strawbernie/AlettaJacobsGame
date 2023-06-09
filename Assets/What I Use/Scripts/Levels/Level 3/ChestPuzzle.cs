@@ -32,7 +32,6 @@ public class ChestPuzzle : MonoBehaviour
         disabledMode.swipeDisabled = false;
         camera3.SetActive(false);
         camera4.SetActive(true);
-        Destroy(ParticleSystem);
         DialogueManager.StartConversation("Level4Start");
     }
 

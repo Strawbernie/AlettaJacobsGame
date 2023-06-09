@@ -55,8 +55,8 @@ public class ObjManagerLevel6 : MonoBehaviour
             plane.SetActive(true);
             ship.SetActive(true);
             curtain.SetActive(true);
-            painting3.SetActive(true);
-            painting2.SetActive(true);
+            painting3.SetActive(false);
+            painting2.SetActive(false);
             poster.SetActive(false);
             desk.SetActive(false);
             PSDesk.SetActive(false);
@@ -121,8 +121,8 @@ public class ObjManagerLevel6 : MonoBehaviour
             plane.SetActive(false);
             ship.SetActive(false);
             curtain.SetActive(false);
-            painting3.SetActive(false);
-            painting2.SetActive(false);
+            painting3.SetActive(true);
+            painting2.SetActive(true);
             poster.SetActive(true);
             desk.SetActive(true);
             PSDesk.SetActive(true);

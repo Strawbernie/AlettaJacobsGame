@@ -21,6 +21,7 @@ public class ObjManagerLevel3 : MonoBehaviour
     public GameObject objectsOnDisplay;
     public GameObject ParticleSystem;
     public GameObject PSModel;
+    public FirstTimePassed firstTimePassed;
 
     // Update is called once per frame
     void Update()
@@ -43,6 +44,10 @@ public class ObjManagerLevel3 : MonoBehaviour
             objectsOnDisplay.SetActive(true);
             bookshelves.SetActive(true);
             plant.SetActive(true);
+            if (firstTimePassed.firstTimeLevel3)
+                {
+                ParticleSystem.SetActive(true);
+            }
         }
 
         // Wall23
@@ -92,7 +97,6 @@ public class ObjManagerLevel3 : MonoBehaviour
             Wall2.SetActive(false);
 
             cupboard.SetActive(true);
-            ParticleSystem.SetActive(true);
             display.SetActive(true);
             HModel.SetActive(true);
             PSModel.SetActive(true);
@@ -103,6 +107,10 @@ public class ObjManagerLevel3 : MonoBehaviour
             objectsOnDisplay.SetActive(true);
             bookshelves.SetActive(false);
             plant.SetActive(false);
+            if (firstTimePassed.firstTimeLevel3)
+            {
+                ParticleSystem.SetActive(true);
+            }
         }
     }
 }

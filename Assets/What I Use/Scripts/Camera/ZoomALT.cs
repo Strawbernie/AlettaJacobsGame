@@ -77,7 +77,7 @@ public class ZoomALT : MonoBehaviour
                             // Disable the Swipe Detector and enable the Go Back button
                             disabledMode.swipeDisabled = true;
                             disabledMode.goBackDisabled = false;
-                            Destroy(Particlesystem);
+                            Particlesystem.SetActive(false);
 
                             // disable tap detector while zoomed in
                             objectTapDetectorActive = false;
