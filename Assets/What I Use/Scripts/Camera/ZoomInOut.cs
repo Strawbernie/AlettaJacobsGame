@@ -50,8 +50,6 @@ public class ZoomInOut : MonoBehaviour
 
     //LVL 2 tutorial
     public DragAndDrop DD;
-    public GameObject ccamera2;
-    public GameObject Text;
     public GameObject ps;
 
     private void Start()
@@ -159,9 +157,12 @@ public class ZoomInOut : MonoBehaviour
                                     DialogueManager.StartConversation("Level5Elections");
                                 }
 
-                                if (ccamera2.activeSelf)
+                                if (gameObject == camera2.gameObject)
                                 {
-                                    DD.Tutorial.SetActive(true);
+                                    if (camera2.transform.rotation.eulerAngles == new Vector3(45f, 0f, 0f))
+                                    {
+                                        DD.Tutorial.SetActive(true);
+                                    }
                                 }
                             }
                         }
@@ -210,12 +211,11 @@ public class ZoomInOut : MonoBehaviour
     private IEnumerator DelayForEnableSwipeDetector()
     {
         disabledMode.zoomDisabled = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         disabledMode.zoomDisabled = false;
         disabledMode.goBackDisabled = true;
         disabledMode.swipeDisabled = false;
         objectTapDetectorActive = true;
-        Text.SetActive(false);
     }
 
     private IEnumerator SmoothCameraChange(Vector3 targetPosition, Quaternion targetRotation, float targetOrthoSize)

@@ -13,7 +13,7 @@ public class BabyTapped : MonoBehaviour
     public GameObject camera1;
     public GameObject camera2;
 
-    public ObjAnim babyBedAnim;
+    public ObjAnimBaby babyBedAnim;
 
     Animator anim;
     public GameObject babyBed;

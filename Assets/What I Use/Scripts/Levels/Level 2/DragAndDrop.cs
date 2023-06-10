@@ -8,8 +8,6 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    public ObjAnim suitcaseAnim;
-
     private Vector3 positionCamera = new Vector3(28, 1.5f, 0.7f);
     private Quaternion rotationCamera = Quaternion.Euler(45, 0, 0);
 
@@ -33,28 +31,24 @@ public class DragAndDrop : MonoBehaviour
     {
         if (transform.position == positionCamera && transform.rotation == rotationCamera)
         {
-            if (suitcaseAnim.isOpen)
+            if (Input.touchCount > 0)
             {
-                Destroy(ParticleSystem);
-                if (Input.touchCount > 0)
-                {
-                    Touch touch = Input.GetTouch(0);
+                Touch touch = Input.GetTouch(0);
 
-                    if (touch.phase == TouchPhase.Began)
-                    {
-                        //Check if we are hovering over Rigidbody, if so, select it
-                        selectedRigidbody = GetRigidbodyFromTouch(touch.position);
-                        Tutorial.SetActive(false);
-                    }
-                    else if (touch.phase == TouchPhase.Ended && selectedRigidbody)
-                    {
-                        //Release selected Rigidbody if there any
-                        selectedRigidbody = null;
-                    }
+                if (touch.phase == TouchPhase.Began)
+                {
+                    //Check if we are hovering over Rigidbody, if so, select it
+                    selectedRigidbody = GetRigidbodyFromTouch(touch.position);
+                    Tutorial.SetActive(false);
+                }
+                else if (touch.phase == TouchPhase.Ended && selectedRigidbody)
+                {
+                    //Release selected Rigidbody if there any
+                    selectedRigidbody = null;
                 }
             }
         }
-        }
+    }
 
     void FixedUpdate()
     {

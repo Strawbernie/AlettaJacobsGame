@@ -12,6 +12,8 @@ public class ObjManagerLevel2 : MonoBehaviour
     public GameObject book;
     public GameObject chair;
     public GameObject desk;
+    public GameObject safeNew;
+    public GameObject safeOld;
     public GameObject books;
     public GameObject pen;
     public GameObject ink;
@@ -58,6 +60,14 @@ public class ObjManagerLevel2 : MonoBehaviour
             KeyParticleSystem.SetActive(false);
             Key.SetActive(false);
             desk.SetActive(false);
+            if (safeNew != null)
+            {
+                safeNew.SetActive(false);
+            }
+            if (safeOld != null)
+            {
+                safeOld.SetActive(false);
+            }
             books.SetActive(false);
             pen.SetActive(false);
             ink.SetActive(false);
@@ -85,6 +95,14 @@ public class ObjManagerLevel2 : MonoBehaviour
             KeyParticleSystem.SetActive(true);
             Key.SetActive(true);
             desk.SetActive(true);
+            if (safeNew != null)
+            {
+                safeNew.SetActive(true);
+            }
+            if (safeOld != null)
+            {
+                safeOld.SetActive(true);
+            }
             books.SetActive(true);
             pen.SetActive(true);
             ink.SetActive(true);
@@ -112,6 +130,14 @@ public class ObjManagerLevel2 : MonoBehaviour
             KeyParticleSystem.SetActive(true);
             Key.SetActive(true);
             desk.SetActive(true);
+            if (safeNew != null)
+            {
+                safeNew.SetActive(true);
+            }
+            if (safeOld != null)
+            {
+                safeOld.SetActive(true);
+            }
             books.SetActive(true);
             pen.SetActive(true);
             ink.SetActive(true);
@@ -139,6 +165,14 @@ public class ObjManagerLevel2 : MonoBehaviour
             KeyParticleSystem.SetActive(false);
             Key.SetActive(false);
             desk.SetActive(false);
+            if (safeNew != null)
+            {
+                safeNew.SetActive(false);
+            }
+            if (safeOld != null) 
+            { 
+                safeOld.SetActive(false); 
+            }
             books.SetActive(false);
             pen.SetActive(false);
             ink.SetActive(false);

@@ -80,11 +80,14 @@ public class ObjAnim : MonoBehaviour
             // Check the sign of the deltaMagnitudeDiff variable to determine pinch direction.
             if (deltaMagnitudeDiff > 0)
             {
-                // Pinch in (zoom out).
-                //Do animation on pinch
-                anim.SetTrigger("TrZoomOut");
-                isOpen = false;
-                objectTapDetectorActive = true;
+                if (isOpen)
+                {
+                    // Pinch in (zoom out).
+                    //Do animation on pinch
+                    anim.SetTrigger("TrZoomOut");
+                    isOpen = false;
+                    objectTapDetectorActive = true;
+                }
             }
             else if (deltaMagnitudeDiff < 0)
             {
@@ -96,9 +99,12 @@ public class ObjAnim : MonoBehaviour
 
     public void BackButtonClicked()
     {
-        anim.SetTrigger("TrZoomOut");
-        isOpen = false;
-        objectTapDetectorActive = true;
+        if (isOpen)
+        {
+            anim.SetTrigger("TrZoomOut");
+            isOpen = false;
+            objectTapDetectorActive = true;
+        }
     }
 }
 

@@ -8,7 +8,7 @@ public class ChestPuzzle : MonoBehaviour
     public GameObject camera3;
     public GameObject camera4;
 
-    public ObjAnim chestObjAnim;
+    public ObjAnimCupboard chestObjAnim;
 
     Animator anim;
     public GameObject chest;
