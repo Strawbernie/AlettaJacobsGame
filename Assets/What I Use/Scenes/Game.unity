@@ -595,6 +595,7 @@ MonoBehaviour:
   objectTapDetectorActive: 1
   DD: {fileID: 38817388}
   ps: {fileID: 692603267}
+  Text: {fileID: 0}
 --- !u!114 &38817388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,6 +641,7 @@ MonoBehaviour:
   objectTapDetectorActive: 1
   DD: {fileID: 38817388}
   ps: {fileID: 134521732}
+  Text: {fileID: 0}
 --- !u!114 &38817391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,6 +672,7 @@ MonoBehaviour:
   objectTapDetectorActive: 1
   DD: {fileID: 38817388}
   ps: {fileID: 2000035424}
+  Text: {fileID: 0}
 --- !u!1001 &42014187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3994,7 +3997,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305796182}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6db8983e5c84104d9ed45be49a6eb61, type: 3}
   m_Name: 
@@ -6113,6 +6116,7 @@ MonoBehaviour:
   objectTapDetectorActive: 1
   DD: {fileID: 0}
   ps: {fileID: 1904969274}
+  Text: {fileID: 0}
 --- !u!114 &488080708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6599,6 +6603,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5895554375918220301, guid: c9e4323fe420b194ba9418bebe5632a9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5bb565cd9ad9a54da265f35ca78616a, type: 2}
     - target: {fileID: -4774811299422790143, guid: c9e4323fe420b194ba9418bebe5632a9,
         type: 3}
       propertyPath: m_IsActive
@@ -6609,6 +6618,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a5e5dc0aea224b843a14962fc7d7bdf3, type: 2}
+    - target: {fileID: -3642837704776850298, guid: c9e4323fe420b194ba9418bebe5632a9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5bb565cd9ad9a54da265f35ca78616a, type: 2}
     - target: {fileID: 919132149155446097, guid: c9e4323fe420b194ba9418bebe5632a9,
         type: 3}
       propertyPath: m_Name
@@ -6629,6 +6643,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7341835622001519860, guid: c9e4323fe420b194ba9418bebe5632a9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5bb565cd9ad9a54da265f35ca78616a, type: 2}
+    - target: {fileID: 8232525621611552665, guid: c9e4323fe420b194ba9418bebe5632a9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5bb565cd9ad9a54da265f35ca78616a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9e4323fe420b194ba9418bebe5632a9, type: 3}
 --- !u!1 &507116705
@@ -9820,6 +9844,7 @@ MonoBehaviour:
   objectTapDetectorActive: 1
   DD: {fileID: 0}
   ps: {fileID: 293334427}
+  Text: {fileID: 0}
 --- !u!81 &776293987
 AudioListener:
   m_ObjectHideFlags: 0
@@ -12655,6 +12680,7 @@ MonoBehaviour:
   objectTapDetectorActive: 1
   DD: {fileID: 0}
   ps: {fileID: 1263954933}
+  Text: {fileID: 0}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21688,6 +21714,7 @@ MonoBehaviour:
   objectTapDetectorActive: 1
   DD: {fileID: 0}
   ps: {fileID: 1170509700}
+  Text: {fileID: 0}
 --- !u!81 &1678185550
 AudioListener:
   m_ObjectHideFlags: 0
@@ -23996,6 +24023,7 @@ MonoBehaviour:
   objectTapDetectorActive: 1
   DD: {fileID: 0}
   ps: {fileID: 2137553833}
+  Text: {fileID: 1146743439}
 --- !u!81 &1922714815
 AudioListener:
   m_ObjectHideFlags: 0

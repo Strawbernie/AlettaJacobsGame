@@ -51,6 +51,7 @@ public class ZoomInOut : MonoBehaviour
     //LVL 2 tutorial
     public DragAndDrop DD;
     public GameObject ps;
+    public GameObject Text;
 
     private void Start()
     {
@@ -216,6 +217,7 @@ public class ZoomInOut : MonoBehaviour
         disabledMode.goBackDisabled = true;
         disabledMode.swipeDisabled = false;
         objectTapDetectorActive = true;
+        Text.SetActive(false);
     }
 
     private IEnumerator SmoothCameraChange(Vector3 targetPosition, Quaternion targetRotation, float targetOrthoSize)
