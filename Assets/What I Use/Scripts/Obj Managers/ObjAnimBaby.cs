@@ -9,6 +9,7 @@ public class ObjAnimBaby : MonoBehaviour
     public DisabledMode disabledMode;
 
     public Button goBackButton;
+    public GameObject Settings;
 
     public Camera cameraInUse;
     Animator anim;
@@ -25,7 +26,7 @@ public class ObjAnimBaby : MonoBehaviour
 
     void Update()
     {
-        if (!disabledMode.zoomDisabled)
+        if (!disabledMode.zoomDisabled && !Settings)
         {
             if (objectTapDetectorActive)
             {
