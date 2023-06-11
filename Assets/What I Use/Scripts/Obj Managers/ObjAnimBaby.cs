@@ -26,7 +26,7 @@ public class ObjAnimBaby : MonoBehaviour
 
     void Update()
     {
-        if (!disabledMode.zoomDisabled && !Settings)
+        if (!disabledMode.zoomDisabled)
         {
             if (objectTapDetectorActive)
             {

@@ -7,6 +7,8 @@ public class ObjManagerLevel3 : MonoBehaviour
     // Level's Walls
     public GameObject Wall1;
     public GameObject Wall2;
+    public GameObject Wall3;
+    public GameObject Wall4;
 
     // Level's objects
     public GameObject cupboard;
@@ -31,6 +33,8 @@ public class ObjManagerLevel3 : MonoBehaviour
         {
             Wall1.SetActive(true);
             Wall2.SetActive(true);
+            Wall3.SetActive(false);
+            Wall4.SetActive(false);
 
             cupboard.SetActive(true);
             ParticleSystem.SetActive(true);
@@ -55,6 +59,8 @@ public class ObjManagerLevel3 : MonoBehaviour
         {
             Wall1.SetActive(false);
             Wall2.SetActive(true);
+            Wall3.SetActive(true);
+            Wall1.SetActive(false);
 
             cupboard.SetActive(false);
             ParticleSystem.SetActive(false);
@@ -75,6 +81,8 @@ public class ObjManagerLevel3 : MonoBehaviour
         {
             Wall1.SetActive(false);
             Wall2.SetActive(false);
+            Wall3.SetActive(true);
+            Wall1.SetActive(true);
 
             cupboard.SetActive(false);
             ParticleSystem.SetActive(false);
@@ -95,6 +103,8 @@ public class ObjManagerLevel3 : MonoBehaviour
         {
             Wall1.SetActive(true);
             Wall2.SetActive(false);
+            Wall3.SetActive(false);
+            Wall1.SetActive(true);
 
             cupboard.SetActive(true);
             display.SetActive(true);
