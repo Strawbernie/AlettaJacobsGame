@@ -9,6 +9,7 @@ public class EndingAnim : MonoBehaviour
     private Vector3 fp;   //First touch position
     private Vector3 lp;   //Last touch position
     private float dragDistance;  //minimum distance for a swipe to be registered
+    public GameObject SwipeT;
 
     void Update()
     {
@@ -38,6 +39,7 @@ public class EndingAnim : MonoBehaviour
                         if (Mathf.Abs(lp.x - fp.x) > Mathf.Abs(lp.y - fp.y))
                         {   //If the horizontal movement is greater than the vertical movement...
                             Book.GetComponent<Animator>().Play("Ending");
+                            SwipeT.SetActive(false);
                         }
                     }
                 }

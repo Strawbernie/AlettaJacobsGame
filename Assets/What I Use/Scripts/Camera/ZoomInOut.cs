@@ -117,93 +117,96 @@ public class ZoomInOut : MonoBehaviour
     void Update()
     {
         if (gameObject.activeSelf)
-        {   
-            // Check for the zoom in to be enabled
-            if (!disabledMode.zoomDisabled)
+        {
+            if (!isChanging)
             {
-                if (objectTapDetectorActive)
+                // Check for the zoom in to be enabled
+                if (!disabledMode.zoomDisabled)
                 {
-                    #region Tap
-                    // Check if the object is tapped
-                    if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+                    if (objectTapDetectorActive)
                     {
-                        Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-                        RaycastHit hit;
-
-                        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == objectToZoomInOn)
+                        #region Tap
+                        // Check if the object is tapped
+                        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
                         {
-                            // Disable the Swipe Detector and enable the Go Back button
-                            disabledMode.swipeDisabled = true;
-                            disabledMode.goBackDisabled = false;
+                            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+                            RaycastHit hit;
 
-                            // disable tap detector while zoomed in
-                            objectTapDetectorActive = false;
-
-                            if (!isChanging)
+                            if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == objectToZoomInOn)
                             {
-                                // Zoom in
+                                // Disable the Swipe Detector and enable the Go Back button
+                                disabledMode.swipeDisabled = true;
+                                disabledMode.goBackDisabled = false;
 
-                                invWalls.SetActive(true);
-                                DialogueManager.StopConversation();
-                                ps.SetActive(false);
-                                StartCoroutine(SmoothCameraChange(newPosition, newRotation, newOrthoSize));
-                                isAtOriginalPosition = false;
-                                //checks if camera2 is active to set the suitcase tutorial active
-                                if (gameObject == camera3.gameObject)
+                                // disable tap detector while zoomed in
+                                objectTapDetectorActive = false;
+
+                                if (!isChanging)
                                 {
-                                    DialogueManager.StartConversation("Level3Drawer");
-                                }
-                                if (gameObject == camera5.gameObject)
-                                {
-                                    DialogueManager.StartConversation("Level5Elections");
-                                }
-                                if (gameObject == camera2.gameObject)
-                                {
-                                    //if (camera2.transform.rotation.eulerAngles == new Vector3(45f, 0f, 0f))
-                                   // {
+                                    // Zoom in
+
+                                    invWalls.SetActive(true);
+                                    DialogueManager.StopConversation();
+                                    ps.SetActive(false);
+                                    StartCoroutine(SmoothCameraChange(newPosition, newRotation, newOrthoSize));
+                                    isAtOriginalPosition = false;
+                                    //checks if camera2 is active to set the suitcase tutorial active
+                                    if (gameObject == camera3.gameObject)
+                                    {
+                                        DialogueManager.StartConversation("Level3Drawer");
+                                    }
+                                    if (gameObject == camera5.gameObject)
+                                    {
+                                        DialogueManager.StartConversation("Level5Elections");
+                                    }
+                                    if (gameObject == camera2.gameObject)
+                                    {
+                                        //if (camera2.transform.rotation.eulerAngles == new Vector3(45f, 0f, 0f))
+                                        // {
                                         DD.Tutorial.SetActive(true);
-                                   // }
+                                        // }
+                                    }
                                 }
                             }
+                        }
+                        #endregion
+                    }
+
+                    #region Pinch
+                    if (Input.touchCount == 2)
+                    {
+                        // Store both touches.
+                        Touch touchZero = Input.GetTouch(0);
+                        Touch touchOne = Input.GetTouch(1);
+
+                        // Find the position in the previous frame of each touch.
+                        Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+                        Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+                        // Find the magnitude of the vector (the distance) between the touches in each frame.
+                        float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+                        float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
+
+                        // Find the difference in the distances between each frame.
+                        float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
+
+                        // Check the sign of the deltaMagnitudeDiff variable to determine pinch direction.
+                        if (deltaMagnitudeDiff > 0)
+                        {
+                            // Pinch in (zoom out).
+                            if (!isChanging)
+                            {
+                                // Zoom out to the original position and rotation of the camera
+                                invWalls.SetActive(false);
+                                StartCoroutine(SmoothCameraChange(lastPosition, lastRotation, lastOrthoSize));
+                            }
+
+                            // Enable Swipe Detector and disable Go Back button
+                            StartCoroutine(DelayForEnableSwipeDetector());
                         }
                     }
                     #endregion
                 }
-
-                #region Pinch
-                if (Input.touchCount == 2)
-                {
-                    // Store both touches.
-                    Touch touchZero = Input.GetTouch(0);
-                    Touch touchOne = Input.GetTouch(1);
-
-                    // Find the position in the previous frame of each touch.
-                    Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-                    Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
-
-                    // Find the magnitude of the vector (the distance) between the touches in each frame.
-                    float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-                    float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
-
-                    // Find the difference in the distances between each frame.
-                    float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
-
-                    // Check the sign of the deltaMagnitudeDiff variable to determine pinch direction.
-                    if (deltaMagnitudeDiff > 0)
-                    {
-                        // Pinch in (zoom out).
-                        if (!isChanging)
-                        {
-                            // Zoom out to the original position and rotation of the camera
-                            invWalls.SetActive(false);
-                            StartCoroutine(SmoothCameraChange(lastPosition, lastRotation, lastOrthoSize));
-                        }
-
-                        // Enable Swipe Detector and disable Go Back button
-                        StartCoroutine(DelayForEnableSwipeDetector());
-                    }
-                }
-                #endregion
             }
         }
     }

@@ -23,6 +23,11 @@ public class HintManager : MonoBehaviour
             HintButton.SetActive(true);
             Settings.SetActive(true);
         }
+        else if (!mainMenu.activeSelf && !pauseMenu.activeSelf && !confirmMenu.activeSelf && !HandIn.activeSelf)
+        {
+            HintButton.SetActive(false);
+            Settings.SetActive(true);
+        }
         else
         {
             HintButton.SetActive(false);
