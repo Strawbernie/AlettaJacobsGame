@@ -117,7 +117,7 @@ public class ZoomInOut : MonoBehaviour
     void Update()
     {
         if (gameObject.activeSelf)
-        {
+        {   
             // Check for the zoom in to be enabled
             if (!disabledMode.zoomDisabled)
             {
@@ -157,13 +157,12 @@ public class ZoomInOut : MonoBehaviour
                                 {
                                     DialogueManager.StartConversation("Level5Elections");
                                 }
-
                                 if (gameObject == camera2.gameObject)
                                 {
-                                    if (camera2.transform.rotation.eulerAngles == new Vector3(45f, 0f, 0f))
-                                    {
+                                    //if (camera2.transform.rotation.eulerAngles == new Vector3(45f, 0f, 0f))
+                                   // {
                                         DD.Tutorial.SetActive(true);
-                                    }
+                                   // }
                                 }
                             }
                         }

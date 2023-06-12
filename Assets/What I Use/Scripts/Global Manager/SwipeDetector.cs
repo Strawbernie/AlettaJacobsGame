@@ -39,7 +39,6 @@ public class SwipeDetector : MonoBehaviour
                 {
                     if (Input.touchCount == 1) // user is touching the screen with a single touch
                     {
-                        Destroy(SwipeTutorial);
                         Touch touch = Input.GetTouch(0); // get the touch
                         if (touch.phase == TouchPhase.Began) //check for the first touch
                             
@@ -60,7 +59,9 @@ public class SwipeDetector : MonoBehaviour
                             {//It's a drag
                              //check if the drag is vertical or horizontal
                                 if (Mathf.Abs(lp.x - fp.x) > Mathf.Abs(lp.y - fp.y))
-                                {   //If the horizontal movement is greater than the vertical movement...
+                                {
+                                    Destroy(SwipeTutorial);
+                                    //If the horizontal movement is greater than the vertical movement...
                                     if ((lp.x > fp.x))  //If the movement was to the right)
                                     {   //Right swipe
                                         StartCameraRotation(90f);

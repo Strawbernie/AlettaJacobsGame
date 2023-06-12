@@ -13,6 +13,7 @@ public class ObjAnimCupboard : MonoBehaviour
     public Camera cameraInUse;
     Animator anim;
     public bool isOpen = false;
+    public GameObject pens;
 
     // Boolean that will allow the code to detect touch
     public bool objectTapDetectorActive = true;
@@ -46,6 +47,11 @@ public class ObjAnimCupboard : MonoBehaviour
                             {
                                 anim.SetTrigger("TrZoomIn");
                                 isOpen = true;
+                                pens.SetActive(true);
+                            }
+                            else
+                            {
+                                pens.SetActive(false);
                             }
                         }
                     }

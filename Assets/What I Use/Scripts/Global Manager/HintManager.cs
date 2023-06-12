@@ -10,12 +10,13 @@ public class HintManager : MonoBehaviour
     public GameObject HintButton;
     public GameObject hintPanel;
     public GameObject TargetHint;
+    public GameObject camera7;
     // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()
     {
-        if (!mainMenu.activeSelf && !pauseMenu.activeSelf && !confirmMenu.activeSelf)
+        if (!mainMenu.activeSelf && !pauseMenu.activeSelf && !confirmMenu.activeSelf && !camera7.activeSelf)
         {
             HintButton.SetActive(true);
         }

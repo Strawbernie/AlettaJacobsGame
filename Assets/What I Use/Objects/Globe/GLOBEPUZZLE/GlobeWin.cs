@@ -14,6 +14,10 @@ public class GlobeWin : MonoBehaviour
     public bool objectTapDetectorActive = true;
     public GameObject HintPanel;
     public GameObject levelChanger;
+    public GameObject TimeTravel;
+    public GameObject Settings;
+    public GameObject Hints;
+    public GameObject SwipeTutorial;
     // Update is called once per frame
     private void Start()
     {
@@ -38,5 +42,8 @@ public class GlobeWin : MonoBehaviour
         camera7.SetActive(true);
         HintPanel.SetActive(false);
         Hint.SetActive(false);
+        TimeTravel.SetActive(false);
+        Settings.SetActive(false);
+        SwipeTutorial.SetActive(true);
     }
 }

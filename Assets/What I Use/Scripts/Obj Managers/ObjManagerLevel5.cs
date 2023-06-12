@@ -21,7 +21,6 @@ public class ObjManagerLevel5 : MonoBehaviour
     public GameObject fireplace;
     public GameObject PicFrameFancy;
     public GameObject Puzzle;
-    public GameObject PS;
 
     // Level's walls
     public GameObject Wall1;
@@ -45,7 +44,6 @@ public class ObjManagerLevel5 : MonoBehaviour
             painting1.SetActive(true);
             cupboard1.SetActive(true);
             Puzzle.SetActive(true);
-            PS.SetActive(true);
             bed.SetActive(true);
             painting2.SetActive(false);
             plant2.SetActive(true);
@@ -72,7 +70,6 @@ public class ObjManagerLevel5 : MonoBehaviour
             painting1.SetActive(true);
             cupboard1.SetActive(true);
             Puzzle.SetActive(true);
-            PS.SetActive(true);
             bed.SetActive(true);
             painting2.SetActive(false);
             plant2.SetActive(true);
@@ -99,7 +96,6 @@ public class ObjManagerLevel5 : MonoBehaviour
             painting1.SetActive(false);
             cupboard1.SetActive(false);
             Puzzle.SetActive(false);
-            PS.SetActive(false);
             bed.SetActive(false);
             painting2.SetActive(true);
             plant2.SetActive(false);
@@ -126,7 +122,6 @@ public class ObjManagerLevel5 : MonoBehaviour
             painting1.SetActive(false);
             cupboard1.SetActive(false);
             Puzzle.SetActive(false);
-            PS.SetActive(false);
             bed.SetActive(false);
             painting2.SetActive(true);
             plant2.SetActive(false);

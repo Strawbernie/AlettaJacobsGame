@@ -1157,7 +1157,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'And then back to studying '
+        value: It's time to make my test!
         type: 0
         typeString: 
       - title: Sequence
@@ -1179,8 +1179,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 80
-        y: 100
+        x: 87.95653
+        y: 102.60869
         width: 160
         height: 30
     entryGroups: []
