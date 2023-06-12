@@ -14,11 +14,12 @@ public class PriorityControl : MonoBehaviour
     public GameObject Level5;
     public GameObject Level6;
     public GameObject Level7;
+    public GameObject LVL6Text;
 
     // Update is called once per frame
     void Update()
     {
-        if (!MainMenu.activeSelf && !pauseMenu.activeSelf && !Confirmmenu.activeSelf)
+        if (!MainMenu.activeSelf && !pauseMenu.activeSelf && !Confirmmenu.activeSelf && !LVL6Text.activeSelf)
         {
             Level1.SetActive(true);
             Level2.SetActive(true);
