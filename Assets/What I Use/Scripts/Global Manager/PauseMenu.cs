@@ -7,11 +7,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject Pausemenu;
     public GameObject MainMenu;
     public GameObject Cog;
+    public GameObject HandIn;
 
     // Update is called once per frame
     void Update()
     {
-        if (!MainMenu.activeSelf || !Pausemenu.activeSelf) 
+        if (!MainMenu.activeSelf || !Pausemenu.activeSelf && !HandIn.activeSelf) 
         {
             Cog.SetActive(true);
         }
